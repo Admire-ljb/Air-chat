@@ -1,3 +1,4 @@
+## Appendix B: Task Set
 ### AT1: Simple Tasks (1-5 steps per task)
 
 #### Basic Tasks:
@@ -157,3 +158,31 @@
 1. Drone swarm simultaneously optimizes flight paths and dynamically adjusts them based on real-time intelligence data, enhancing mission execution efficiency and success rates while countering sophisticated enemy interference and electronic warfare measures.
 2. Drone swarm simultaneously monitors and controls task execution progress in real-time, ensuring smooth and successful task completion while effectively countering sophisticated enemy interference and maintaining operational security.
 3. Drone swarm simultaneously analyzes and improves issues in task execution, enhancing overall mission execution quality and effectiveness against evolving sophisticated enemy tactics and threats.
+
+### AT6: Master Tasks (30 steps and above per task)
+
+#### Basic Tasks:
+1. Drone swarm simultaneously conducts ground target search and engagement missions in complex environments, efficiently locating and engaging targets while neutralizing enemy air defense systems and threats.
+2. Drone swarm simultaneously completes multiple tracking and identification tasks on dynamic targets, enhancing target surveillance efficiency while countering sophisticated enemy electronic warfare measures.
+3. Drone swarm simultaneously executes long-duration aerial surveillance missions, providing comprehensive and persistent surveillance of target activities while effectively countering potential aerial threats.
+
+#### Cooperative Tasks:
+1. Drone swarm simultaneously performs various formation flight and formation configuration transformation tasks, diversifying and adapting flight formations while countering sophisticated enemy aerial interference and electronic countermeasures.
+2. Drone swarm simultaneously completes complex formation attack tasks on multiple targets, enhancing attack effectiveness while evading and neutralizing enemy air defense systems and threats.
+3. Drone swarm simultaneously cooperates to counter and defend against targets attacking from multiple directions, ensuring air defense safety and effectively repelling enemy attacks while maintaining operational security.
+
+#### Operational Tasks:
+1. Drone swarm simultaneously performs intelligent evasive maneuvers and rapid maneuvers in complex environments, ensuring safe and effective flight operations while countering sophisticated enemy air defense threats and electronic warfare measures.
+2. Drone swarm simultaneously executes high-speed flight and complex aerial combat maneuvers, enhancing flight maneuverability and effectiveness against sophisticated enemy aerial threats and countermeasures.
+3. Drone swarm simultaneously conducts low-altitude flight missions in complex terrain, ensuring efficient execution of low-altitude operations while mitigating ground-based air defense threats and electronic warfare measures.
+
+#### Responsive Tasks:
+1. Drone swarm simultaneously responds intelligently to complex aerial situations, ensuring efficient and safe flight operations while countering sophisticated enemy aerial threats and electronic warfare measures.
+2. Drone swarm simultaneously coordinates to surround and control targets from multiple directions, effectively neutralizing enemy targets while minimizing exposure to enemy fire and electronic countermeasures.
+3. Drone swarm simultaneously conducts battlefield situation analysis, adjusting combat strategies and flight actions based on real-time intelligence to effectively counter sophisticated enemy tactics and threats.
+
+#### Mission Planning:
+1. Drone swarm simultaneously optimizes flight paths and dynamically adjusts them based on real-time intelligence data, enhancing mission execution efficiency and success rates while countering sophisticated enemy interference and electronic warfare measures.
+2. Drone swarm simultaneously monitors and controls task execution progress in real-time, ensuring smooth and successful task completion while effectively countering sophisticated enemy interference and maintaining operational security.
+3. Drone swarm simultaneously analyzes and improves issues in task execution, enhancing overall mission execution quality and effectiveness against evolving sophisticated enemy tactics and threats.
+
