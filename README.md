@@ -1,4 +1,4 @@
-### Step Level One: Simple Tasks (1-5 steps per task)
+### AT1: Simple Tasks (1-5 steps per task)
 
 #### Basic Tasks:
 
@@ -30,7 +30,7 @@
 2. Drone swarm simultaneously adjusts flight trajectories based on preset commands to achieve dynamic flight.
 3. Drone swarm simultaneously reports and records task execution status, providing feedback to the control center.
 
-### Step Level Two: Moderate Tasks (6-10 steps per task)
+### AT2: Moderate Tasks (6-10 steps per task)
 
 #### Basic Tasks:
 
@@ -62,7 +62,7 @@
 2. Drone swarm simultaneously executes flight tasks based on preset flight plans and updates task execution status in real-time.
 3. Drone swarm simultaneously evaluates and summarizes task execution, proposes optimization suggestions, and improves flight strategy.
 
-### Step Level Three: Complex Tasks (11-15 steps per task)
+### AT3: Complex Tasks (11-15 steps per task)
 
 #### Basic Tasks:
 
@@ -94,7 +94,7 @@
 2. Drone swarm simultaneously monitors and controls task execution progress in real-time, ensuring smooth and successful task completion.
 3. Drone swarm simultaneously analyzes and improves issues in task execution, enhancing task execution quality and effectiveness.
 
-### Step Level Four: Advanced Tasks (16-20 steps per task)
+### AT4: Advanced Tasks (16-20 steps per task)
 
 #### Basic Tasks:
 
@@ -126,7 +126,7 @@
 2. Drone swarm simultaneously monitors and controls task execution progress in real-time, ensuring smooth and successful task completion.
 3. Drone swarm simultaneously analyzes and improves issues in task execution, enhancing overall mission execution quality and effectiveness against evolving enemy tactics and threats.
 
-### Step Level Five: Expert Tasks (21-25 steps per task)
+### AT5: Expert Tasks (21-25 steps per task)
 
 #### Basic Tasks:
 
