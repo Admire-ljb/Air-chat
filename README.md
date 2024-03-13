@@ -25,7 +25,7 @@
 2. Drone swarm simultaneously makes real-time adjustments to changes in target position to maintain tracking.
 3. Drone swarm simultaneously executes predetermined actions based on preset conditions, such as returning home or issuing warning signals.
 
-#### Mission Planning:
+#### Mission planning
 
 1. Drone swarm simultaneously executes tasks according to flight plans, maintaining uniform actions.
 2. Drone swarm simultaneously adjusts flight trajectories based on preset commands to achieve dynamic flight.
@@ -57,7 +57,7 @@
 2. Drone swarm simultaneously executes multi-directional encirclement and blockade of targets to prevent their escape.
 3. Drone swarm simultaneously adjusts flight strategy in real-time based on environmental changes to ensure smooth mission completion.
 
-#### Mission Planning:
+#### Mission planning
 
 1. Drone swarm simultaneously adjusts flight paths based on real-time environmental changes to achieve dynamic target tracking.
 2. Drone swarm simultaneously executes flight tasks based on preset flight plans and updates task execution status in real-time.
@@ -89,7 +89,7 @@
 2. Drone swarm simultaneously coordinates to surround and control targets from multiple directions, preventing target escape.
 3. Drone swarm simultaneously conducts battlefield situation analysis, adjusting combat strategies based on intelligence data.
 
-#### Mission Planning:
+#### Mission planning
 
 1. Drone swarm simultaneously optimizes flight paths and dynamically adjusts them based on real-time intelligence data, improving mission execution efficiency.
 2. Drone swarm simultaneously monitors and controls task execution progress in real-time, ensuring smooth and successful task completion.
@@ -121,7 +121,7 @@
 2. Drone swarm simultaneously coordinates to surround and control targets from multiple directions, effectively neutralizing enemy targets.
 3. Drone swarm simultaneously conducts battlefield situation analysis, adjusting combat strategies and flight actions against enemy tactical threats.
 
-#### Mission Planning:
+#### Mission planning
 
 1. Drone swarm simultaneously optimizes flight paths and dynamically adjusts them based on real-time intelligence data, enhancing mission execution efficiency.
 2. Drone swarm simultaneously monitors and controls task execution progress in real-time, ensuring smooth and successful task completion.
@@ -153,7 +153,7 @@
 2. Drone swarm simultaneously coordinates to surround and control targets from multiple directions, effectively neutralizing enemy targets while minimizing exposure to enemy fire and electronic countermeasures.
 3. Drone swarm simultaneously conducts battlefield situation analysis, adjusting combat strategies and flight actions based on real-time intelligence to effectively counter sophisticated enemy tactics and threats.
 
-#### Mission Planning:
+#### Mission planning
 
 1. Drone swarm simultaneously optimizes flight paths and dynamically adjusts them based on real-time intelligence data, enhancing mission execution efficiency and success rates while countering sophisticated enemy interference and electronic warfare measures.
 2. Drone swarm simultaneously monitors and controls task execution progress in real-time, ensuring smooth and successful task completion while effectively countering sophisticated enemy interference and maintaining operational security.
@@ -181,7 +181,7 @@
 2. Drone swarm simultaneously coordinates to surround and control targets from multiple directions, effectively neutralizing enemy targets while minimizing exposure to enemy fire and electronic countermeasures.
 3. Drone swarm simultaneously conducts battlefield situation analysis, adjusting combat strategies and flight actions based on real-time intelligence to effectively counter sophisticated enemy tactics and threats.
 
-#### Mission Planning:
+#### Mission planning
 1. Drone swarm simultaneously optimizes flight paths and dynamically adjusts them based on real-time intelligence data, enhancing mission execution efficiency and success rates while countering sophisticated enemy interference and electronic warfare measures.
 2. Drone swarm simultaneously monitors and controls task execution progress in real-time, ensuring smooth and successful task completion while effectively countering sophisticated enemy interference and maintaining operational security.
 3. Drone swarm simultaneously analyzes and improves issues in task execution, enhancing overall mission execution quality and effectiveness against evolving sophisticated enemy tactics and threats.
