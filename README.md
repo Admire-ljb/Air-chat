@@ -865,13 +865,13 @@ conduct_surveillance()
 ```
 
 Explanation:
-
 The function conduct_surveillance() orchestrates the surveillance mission.
 We first find all the people objects in the scene using drones.find_system_objects("people").
 Each drone in the swarm is then commanded to fly to initial positions around the area where people are located.
 We continuously monitor the surroundings by looping indefinitely. Each drone checks if it finds the target (people).
 If a drone finds people, it records the information about the activity of the people in real-time.
 Please adjust the logic as needed based on your specific scenario and requirements. Let me know if you need further assistance or modifications.
+
 ---
 
 **exit**
