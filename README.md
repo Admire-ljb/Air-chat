@@ -350,7 +350,7 @@ Thank you for providing the functions and clarifying the scenario. I'm ready to 
 Certainly! To take off, we need to command the drone to fly to a certain altitude. In this case, let's assume the desired altitude is 10 meters. Here's the Python code to achieve that:
 
 ```
-pythonCopy codedef take_off(drone_name):
+def take_off(drone_name):
     # Command the drone to fly to the desired altitude
     drones.fly_to(drone_name, [0, 0, -10])
 
@@ -373,7 +373,7 @@ Please make sure to replace `'drone_a'` with the actual name of your drone. Let 
 Certainly! To fly three drones and have them search for a person, we can use a loop to iterate through each drone and command them to search for the person. Here's the Python code to achieve that:
 
 ```
-pythonCopy codedef fly_to_find_person(drone_names, target_name):
+def fly_to_find_person(drone_names, target_name):
     # Iterate through each drone
     for drone_name in drone_names:
         # Fly the drone to search for the person
@@ -402,7 +402,7 @@ Please make sure to replace the drone names and target person name with the actu
 Apologies for the oversight. Thank you for mentioning the correct function, `get_agent_names()`, to obtain the list of drone names. Here's the updated code using the `get_agent_names()` function:
 
 ```
-pythonCopy codedef fly_to_find_person(target_name):
+def fly_to_find_person(target_name):
     drone_names = drones.get_agent_names()  # Get the list of drone names
     # Iterate through each drone
     for drone_name in drone_names:
@@ -431,7 +431,7 @@ Please let me know if you have any further questions or if there's anything else
 To reset the environment and return all drones to their initial state, you can use the `reset()` function. Here's the Python code to reset the environment:
 
 ```
-pythonCopy code
+
 drones.reset()
 ```
 
@@ -451,7 +451,7 @@ Let me know if there's anything else I can assist you with!
 Certainly! To fly six drones and have them search for six different people, we can use a loop to iterate through each drone and assign them a specific person to find. Here's the Python code to achieve that:
 
 ```
-pythonCopy codedef fly_to_find_people(drone_names, target_names):
+def fly_to_find_people(drone_names, target_names):
     # Iterate through each drone and target person
     for drone_name, target_name in zip(drone_names, target_names):
         # Fly the drone to search for the person
@@ -480,7 +480,7 @@ Please make sure to replace the drone names and target person names with the act
 Apologies for the confusion. Thank you for providing the correct functions to retrieve the list of drone names (`get_agent_names()`) and the list of target person names (`get_target_names("people")`). Here's the updated code using these functions:
 
 ```
-pythonCopy codedef fly_to_find_people():
+def fly_to_find_people():
     drone_names = drones.get_agent_names()  # Get the list of drone names
     target_names = drones.get_target_names("people")  # Get the list of target person names
 
@@ -584,7 +584,7 @@ Thank you for providing the functions and guidelines for using AirSim. I underst
 Certainly! To take off, we need to command the drone to fly to a certain altitude. In this case, let's assume the desired altitude is 10 meters. Here's the Python code to achieve that:
 
 ```
-pythonCopy codedef take_off(drone_name):
+def take_off(drone_name):
     # Command the drone to fly to the desired altitude
     drones.fly_to(drone_name, [0, 0, -10])
 
@@ -607,7 +607,7 @@ Please make sure to replace `'drone_a'` with the actual name of your drone. Let 
 To fly five drones to find a person, we'll use a loop to iterate through the drones and command each one to search for a person. Here's the Python code and an explanation:
 
 ```
-pythonCopy codedef fly_to_find_people(drone_names, target_name):
+def fly_to_find_people(drone_names, target_name):
     for drone_name in drone_names:
         # Fly the drone to search for the person
         drones.fly_to(drone_name, drones.get_target_pose(target_name))
@@ -635,7 +635,7 @@ Please replace the drone names and target person name with the actual names in y
 Apologies for the oversight. Thank you for mentioning the correct function, `get_agent_names()`, to obtain the list of drone names. Here's the updated code using the `get_agent_names()` function:
 
 ```
-pythonCopy codedef fly_to_find_person(target_name):
+def fly_to_find_person(target_name):
     drone_names = drones.get_agent_names()  # Get the list of drone names
     # Iterate through each drone
     for drone_name in drone_names:
@@ -664,7 +664,7 @@ Please let me know if you have any further questions or if there's anything else
 To reset the environment and return all drones to their initial state, you can use the `reset()` function. Here's the Python code to reset the environment:
 
 ```
-pythonCopy code
+
 drones.reset()
 ```
 
@@ -684,7 +684,7 @@ Let me know if there's anything else I can assist you with!
 Certainly! To fly six drones and have them search for six different people, we can use a loop to iterate through each drone and assign them a specific person to find. Here's the Python code to achieve that:
 
 ```
-pythonCopy codedef fly_to_find_people(drone_names, target_names):
+def fly_to_find_people(drone_names, target_names):
     # Iterate through each drone and target person
     for drone_name, target_name in zip(drone_names, target_names):
         # Fly the drone to search for the person
@@ -713,7 +713,7 @@ Please make sure to replace the drone names and target person names with the act
 Apologies for the confusion. Thank you for providing the correct functions to retrieve the list of drone names (`get_agent_names()`) and the list of target person names (`get_target_names("people")`). Here's the updated code using these functions:
 
 ```
-pythonCopy codedef fly_to_find_people():
+def fly_to_find_people():
     drone_names = drones.get_agent_names()  # Get the list of drone names
     target_names = drones.get_target_names("people")  # Get the list of target person names
 
