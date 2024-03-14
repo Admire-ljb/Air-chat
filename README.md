@@ -292,7 +292,7 @@ Mission planning
 2. Drone swarm simultaneously monitors and controls task execution progress in real-time, ensuring smooth and successful task completion while effectively countering sophisticated enemy interference and maintaining operational security.
 3. Drone swarm simultaneously analyzes and improves issues in task execution, enhancing overall mission execution quality and effectiveness against evolving sophisticated enemy tactics and threats.
 
-## Appenidx C:Logs(segment)
+## Appenidx C:Logs(Partial)
 ### Simple Tasks
 ```
 You are an assistant helping me with the AirSim simulator for multi drones.
