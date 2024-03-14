@@ -944,9 +944,8 @@ Continuously monitor for incoming threats from each direction.
 Collaboratively engage and neutralize the targets.
 Ensure air defense safety by effectively countering all threats.
 Let's implement the code for these steps:
+
 ```
-python
-Copy code
 import time
 import drones
 
@@ -999,13 +998,201 @@ def air_defense():
 # Start the air defense mission
 air_defense()
 ```
-Explanation:
 
+Explanation:
 The function air_defense() orchestrates the air defense mission.
 We first detect and identify the enemy targets using drones.find_system_objects("enemy").
 Each drone in the swarm is then commanded to strategically position themselves to cover multiple directions.
 We continuously monitor for incoming threats from each direction. If a target is within range, drones collaboratively engage and neutralize it.
 Please adjust the logic as needed based on your specific scenario and requirements. Let me know if you need further assistance or modifications.
+
+---
+
+**Drone swarm simultaneously conducts ground target search missions in complex terrain, efficiently covering search areas.**
+
+---
+To conduct ground target search missions in complex terrain with a drone swarm efficiently covering search areas, we'll proceed with the following steps:
+
+Divide the search area into smaller sections to be covered by individual drones.
+Command the drone swarm to search each section of the terrain thoroughly.
+Continuously monitor the progress of the search mission.
+Aggregate the search results from each drone to ensure comprehensive coverage.
+Ensure efficient and effective exploration of the entire search area.
+Let's implement the code for these steps:
+
+```
+import time
+import drones
+
+def search_mission():
+    # Step 1: Divide the search area into smaller sections
+    search_area = drones.find_system_objects("terrain")
+    
+    if not search_area:
+        print("No terrain objects found in the scene.")
+        return
+
+    # Determine the number of drones and divide the search area evenly
+    num_drones = len(drones.get_agents_name())
+    section_size = len(search_area) // num_drones
+
+    # Step 2: Command the drone swarm to search each section of the terrain
+    for i, drone_name in enumerate(drones.get_agents_name()):
+        start_index = i * section_size
+        end_index = (i + 1) * section_size if i != num_drones - 1 else len(search_area)
+        section_center = calculate_section_center(search_area[start_index:end_index])
+        drones.GoTo(drone_name, section_center)
+
+    # Step 3 & 4: Continuously monitor the progress and aggregate search results
+    search_results = {}
+    while True:
+        for drone_name in drones.get_agents_name():
+            drone_position = drones.get_drone_position(drone_name)
+            # Check if the drone has completed its search section
+            if is_within_tolerance(drone_position, section_center):
+                # Assume the drone has completed its search and record the results
+                search_results[drone_name] = perform_search(drone_position)
+
+        # Check if all drones have completed their search sections
+        if len(search_results) == num_drones:
+            break
+
+        # Add a delay to simulate continuous monitoring
+        time.sleep(1)
+
+    # Step 5: Ensure efficient and effective exploration of the entire search area
+    process_search_results(search_results)
+
+def calculate_section_center(section):
+    # Calculate the center point of a section based on the average position of terrain objects
+    if not section:
+        return [0, 0]
+
+    sum_x = sum(obj[0] for obj in section)
+    sum_y = sum(obj[1] for obj in section)
+    center_x = sum_x / len(section)
+    center_y = sum_y / len(section)
+    return [center_x, center_y]
+
+def is_within_tolerance(position1, position2, tolerance=1):
+    # Check if two positions are within a certain tolerance
+    distance = ((position1[0] - position2[0]) ** 2 + (position1[1] - position2[1]) ** 2) ** 0.5
+    return distance <= tolerance
+
+def perform_search(drone_position):
+    # Simulate the search process and return the results
+    return "Search results for the section around drone at position " + str(drone_position)
+
+def process_search_results(results):
+    # Process and aggregate search results from all drones
+    for drone, result in results.items():
+        print(f"Search results from {drone}: {result}")
+
+# Start the search mission
+search_mission()
+
+```
+
+Explanation:
+
+The search_mission() function orchestrates the search mission.
+We first divide the search area into smaller sections based on the number of drones.
+Each drone is then commanded to search its designated section of the terrain.
+We continuously monitor the progress of the search mission and aggregate the search results from each drone.
+Finally, we ensure efficient and effective exploration of the entire search area by processing the aggregated search results.
+Please adjust the logic as needed based on your specific scenario and requirements. Let me know if you need further assistance or modifications.
+
+---
+
+**you can't  use drones.find_system_objects("terrain") to get terrain section.**
+
+---
+
+Understood. Since we can't directly obtain the terrain sections from the simulator, we'll need to approximate the search areas based on the drone's initial positions and some assumptions about the terrain layout. Here's the updated code:
+
+```
+import time
+import drones
+import math
+
+def search_mission():
+    # Step 1: Approximate the search areas based on drone positions and assumptions about the terrain layout
+    drone_positions = [drones.get_drone_position(drone_name) for drone_name in drones.get_agents_name()]
+    num_drones = len(drone_positions)
+    search_areas = approximate_search_areas(drone_positions, num_drones)
+
+    # Step 2: Command the drone swarm to search each section of the terrain
+    for i, (drone_name, search_area) in enumerate(zip(drones.get_agents_name(), search_areas)):
+        section_center = calculate_section_center(search_area)
+        drones.GoTo(drone_name, section_center)
+
+    # Step 3 & 4: Continuously monitor the progress and aggregate search results
+    search_results = {}
+    while True:
+        for drone_name in drones.get_agents_name():
+            drone_position = drones.get_drone_position(drone_name)
+            # Check if the drone has completed its search section
+            if is_within_tolerance(drone_position, section_center):
+                # Assume the drone has completed its search and record the results
+                search_results[drone_name] = perform_search(drone_position)
+
+        # Check if all drones have completed their search sections
+        if len(search_results) == num_drones:
+            break
+
+        # Add a delay to simulate continuous monitoring
+        time.sleep(1)
+
+    # Step 5: Ensure efficient and effective exploration of the entire search area
+    process_search_results(search_results)
+
+def approximate_search_areas(drone_positions, num_drones):
+    # Approximate the search areas based on the drone positions and assumptions about the terrain layout
+    search_areas = []
+    for i in range(num_drones):
+        # For simplicity, divide the terrain into equal sections around each drone
+        # You can adjust this logic based on the specific terrain layout
+        search_area = [(drone_positions[i][0] + math.cos(2 * math.pi * j / num_drones), 
+                        drone_positions[i][1] + math.sin(2 * math.pi * j / num_drones)) 
+                       for j in range(num_drones)]
+        search_areas.append(search_area)
+    return search_areas
+
+def calculate_section_center(section):
+    # Calculate the center point of a section based on the average position of terrain objects
+    if not section:
+        return [0, 0]
+
+    sum_x = sum(obj[0] for obj in section)
+    sum_y = sum(obj[1] for obj in section)
+    center_x = sum_x / len(section)
+    center_y = sum_y / len(section)
+    return [center_x, center_y]
+
+def is_within_tolerance(position1, position2, tolerance=1):
+    # Check if two positions are within a certain tolerance
+    distance = ((position1[0] - position2[0]) ** 2 + (position1[1] - position2[1]) ** 2) ** 0.5
+    return distance <= tolerance
+
+def perform_search(drone_position):
+    # Simulate the search process and return the results
+    return "Search results for the section around drone at position " + str(drone_position)
+
+def process_search_results(results):
+    # Process and aggregate search results from all drones
+    for drone, result in results.items():
+        print(f"Search results from {drone}: {result}")
+
+# Start the search mission
+search_mission()
+
+```
+Explanation:
+
+We approximate the search areas based on the initial positions of the drones and some assumptions about the terrain layout.
+The approximate_search_areas() function divides the terrain into equal sections around each drone. You can adjust this logic based on the specific terrain layout and any additional information you have about the environment.
+Please feel free to adjust the logic further based on your specific requirements and any additional information you have about the terrain layout. Let me know if you need further assistance!
+
 ---
 
 **exit**
