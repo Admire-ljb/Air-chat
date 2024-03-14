@@ -825,8 +825,7 @@ Record information about the activity of the people in real-time.
 Repeat steps 3 and 4 until the surveillance mission is completed.
 Let's start by implementing the code for these steps:
 
-python
-Copy code
+```
 import time
 import drones
 
@@ -863,6 +862,8 @@ def conduct_surveillance():
 
 # Start the surveillance mission
 conduct_surveillance()
+```
+
 Explanation:
 
 The function conduct_surveillance() orchestrates the surveillance mission.
