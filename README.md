@@ -1596,9 +1596,9 @@ Please adjust the parameters and logic as needed based on your specific scenario
 
 ---
 
-## Instructions for Drone Swarm Command System
+Instructions for Drone Swarm Command System
 
-### Functions Available:
+Functions Available:
 1. `drones.GoTo(drone_name, [x, y])`: Commands the specified drone to move to the given coordinates `[x, y]`.
 2. `drones.get_drone_position(drone_name)`: Retrieves the current position of the specified drone.
 3. `drones.find_system_objects(object_name)`: Finds objects in the scene with names containing the specified `object_name`.
@@ -1609,9 +1609,9 @@ Please adjust the parameters and logic as needed based on your specific scenario
 8. `drones.roll_back()`: Reverts to the previous position of the drones.
 9. `drones.get_agent_view(drone_name)`: Plots the view of the specified drone.
 
-### Mission: Simultaneous Complex Formation Attack with Evasion
+Mission: Simultaneous Complex Formation Attack with Evasion
 
-#### Steps:
+Steps:
 1. **Identification of Targets**:
    - Use `drones.find_system_objects("enemy")` to identify and prioritize multiple targets for the formation attack.
 
@@ -1628,7 +1628,7 @@ Please adjust the parameters and logic as needed based on your specific scenario
    - Repeat engagement until all targets are neutralized.
    - Mission completes successfully upon neutralizing all targets.
 
-#### Example Usage:
+Example Usage:
 ```
 import time
 import drones
