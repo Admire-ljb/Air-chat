@@ -1,3 +1,4 @@
+# Appendix
 ## Appendix A: Prompts
 ### basic prompt
 Here are some functions you can use to command the drone.
