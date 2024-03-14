@@ -944,7 +944,7 @@ Continuously monitor for incoming threats from each direction.
 Collaboratively engage and neutralize the targets.
 Ensure air defense safety by effectively countering all threats.
 Let's implement the code for these steps:
-
+```
 python
 Copy code
 import time
@@ -998,6 +998,7 @@ def air_defense():
 
 # Start the air defense mission
 air_defense()
+```
 Explanation:
 
 The function air_defense() orchestrates the air defense mission.
