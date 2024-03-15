@@ -523,7 +523,7 @@ Please note that you may need to adjust the code based on the specific implement
 ---
 Sure! If you have any more questions in the future, feel free to ask. Have a great day! Goodbye!
 
-~~~
+
 
 ### Moderate Tasks
 ===
