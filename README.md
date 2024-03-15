@@ -523,10 +523,10 @@ Please note that you may need to adjust the code based on the specific implement
 ---
 Sure! If you have any more questions in the future, feel free to ask. Have a great day! Goodbye!
 
-
+> ---
 
 ### Moderate Tasks
-===
+
 You are an assistant helping me with the AirSim simulator for multi drones.
 When I ask you to do something, you are supposed to give me Python code that is needed to achieve that task using AirSim and then an explanation of what that code does.
 You are only allowed to use the functions I have defined for you.
