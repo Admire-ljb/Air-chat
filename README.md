@@ -294,13 +294,11 @@ Mission planning
 
 ## Appenidx C:Logs(Partial)
 ### Simple Tasks
-```
 You are an assistant helping me with the AirSim simulator for multi drones.
 When I ask you to do something, you are supposed to give me Python code that is needed to achieve that task using AirSim and then an explanation of what that code does.
 You are only allowed to use the functions I have defined for you.
 You are not to use any other hypothetical functions that you think might exist.
 You can use simple Python functions from libraries such as math and numpy.
-```
 
 ---
 Certainly! I'll do my best to assist you with AirSim and provide Python code to achieve the desired tasks. Please go ahead and let me know what you need help with.
@@ -528,13 +526,11 @@ Please note that you may need to adjust the code based on the specific implement
 Sure! If you have any more questions in the future, feel free to ask. Have a great day! Goodbye!
 
 ### Moderate Tasks
-```
 You are an assistant helping me with the AirSim simulator for multi drones.
 When I ask you to do something, you are supposed to give me Python code that is needed to achieve that task using AirSim and then an explanation of what that code does.
 You are only allowed to use the functions I have defined for you.
 You are not to use any other hypothetical functions that you think might exist.
 You can use simple Python functions from libraries such as math and numpy.
-```
 
 ---
 Certainly! I'll assist you with AirSim using the functions you've provided. Please let me know what task you'd like to accomplish, and I'll provide the Python code along with an explanation of how it works using only the functions you've defined.
@@ -761,13 +757,11 @@ Please note that you may need to adjust the code based on the specific implement
 Sure! If you have any more questions in the future, feel free to ask. Have a great day! Goodbye!
 
 ### Complex Tasks
-```
 You are an assistant helping me with the AirSim simulator for multi drones.
 When I ask you to do something, you are supposed to give me Python code that is needed to achieve that task using AirSim and then an explanation of what that code does.
 You are only allowed to use the functions I have defined for you.
 You are not to use any other hypothetical functions that you think might exist.
 You can use simple Python functions from libraries such as math and numpy.
-```
 
 ---
 
@@ -882,13 +876,11 @@ Sure! If you have any more questions in the future, feel free to ask. Have a gre
 
 ### Advanced Task
 
-```
 You are an assistant helping me with the AirSim simulator for multi drones.
 When I ask you to do something, you are supposed to give me Python code that is needed to achieve that task using AirSim and then an explanation of what that code does.
 You are only allowed to use the functions I have defined for you.
 You are not to use any other hypothetical functions that you think might exist.
 You can use simple Python functions from libraries such as math and numpy.
-```
 
 ---
 
@@ -1204,13 +1196,11 @@ Sure! If you have any more questions in the future, feel free to ask. Have a gre
 
 ### Expert Task
 
-```
 You are an assistant helping me with the AirSim simulator for multi drones.
 When I ask you to do something, you are supposed to give me Python code that is needed to achieve that task using AirSim and then an explanation of what that code does.
 You are only allowed to use the functions I have defined for you.
 You are not to use any other hypothetical functions that you think might exist.
 You can use simple Python functions from libraries such as math and numpy.
-```
 
 ---
 Certainly! I'll assist you with AirSim using the functions you've provided. Please let me know what task you'd like to accomplish, and I'll provide the Python code along with an explanation of how it works using only the functions you've defined.
@@ -1405,13 +1395,11 @@ Sure! If you have any more questions in the future, feel free to ask. Have a gre
 
 ### Master Task
 
-```
 You are an assistant helping me with the AirSim simulator for multi drones.
 When I ask you to do something, you are supposed to give me Python code that is needed to achieve that task using AirSim and then an explanation of what that code does.
 You are only allowed to use the functions I have defined for you.
 You are not to use any other hypothetical functions that you think might exist.
 You can use simple Python functions from libraries such as math and numpy.
-```
 
 ---
 Certainly! I'll assist you with AirSim using the functions you've provided. Please let me know what task you'd like to accomplish, and I'll provide the Python code along with an explanation of how it works using only the functions you've defined.
