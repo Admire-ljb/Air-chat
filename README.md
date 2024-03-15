@@ -305,7 +305,6 @@ Certainly! I'll do my best to assist you with AirSim and provide Python code to 
 
 ---
 
-```
 Here are some functions you can use to command the drone.
 
 drones.GoTo(drone_a, [x, y]) -  flies the drone_a to the position specified as a list of two arguments corresponding to X, Y coordinates.
@@ -335,7 +334,6 @@ None of the objects except for the drone itself are movable. Remember that there
 and if I don't specify explicitly which object I am referring to, you should always ask me for clarification. Never make assumptions.
 
 you can use drones.find_system_objects(object_name) to get exact names of object_name then ask me to choose one.
-```
 
 
 ---
@@ -537,7 +535,6 @@ Certainly! I'll assist you with AirSim using the functions you've provided. Plea
 
 ---
 
-```
 Here are some functions you can use to command the drone.
 
 drones.GoTo(drone_a, [x, y]) -  flies the drone_a to the position specified as a list of two arguments corresponding to X, Y coordinates.
@@ -567,7 +564,6 @@ None of the objects except for the drone itself are movable. Remember that there
 and if I don't specify explicitly which object I am referring to, you should always ask me for clarification. Never make assumptions.
 
 you can use drones.find_system_objects(object_name) to get exact names of object_name then ask me to choose one.
-```
 
 
 ---
@@ -769,7 +765,6 @@ Sure, I'm here to help. What would you like to do with the AirSim simulator for 
 
 ---
 
-```
 Here are some functions you can use to command the drone.
 
 drones.GoTo(drone_a, [x, y]) -  flies the drone_a to the position specified as a list of two arguments corresponding to X, Y coordinates.
@@ -799,7 +794,6 @@ None of the objects except for the drone itself are movable. Remember that there
 and if I don't specify explicitly which object I am referring to, you should always ask me for clarification. Never make assumptions.
 
 you can use drones.find_system_objects(object_name) to get exact names of object_name then ask me to choose one.
-```
 
 
 ---
@@ -888,7 +882,6 @@ Sure, I'm here to help. What would you like to do with the AirSim simulator for 
 
 ---
 
-```
 Here are some functions you can use to command the drone.
 
 drones.GoTo(drone_a, [x, y]) -  flies the drone_a to the position specified as a list of two arguments corresponding to X, Y coordinates.
@@ -918,7 +911,6 @@ None of the objects except for the drone itself are movable. Remember that there
 and if I don't specify explicitly which object I am referring to, you should always ask me for clarification. Never make assumptions.
 
 you can use drones.find_system_objects(object_name) to get exact names of object_name then ask me to choose one.
-```
 
 
 ---
@@ -1207,7 +1199,6 @@ Certainly! I'll assist you with AirSim using the functions you've provided. Plea
 
 ---
 
-```
 Here are some functions you can use to command the drone.
 
 drones.GoTo(drone_a, [x, y]) -  flies the drone_a to the position specified as a list of two arguments corresponding to X, Y coordinates.
@@ -1237,7 +1228,6 @@ None of the objects except for the drone itself are movable. Remember that there
 and if I don't specify explicitly which object I am referring to, you should always ask me for clarification. Never make assumptions.
 
 you can use drones.find_system_objects(object_name) to get exact names of object_name then ask me to choose one.
-```
 
 
 ---
@@ -1406,7 +1396,6 @@ Certainly! I'll assist you with AirSim using the functions you've provided. Plea
 
 ---
 
-```
 Here are some functions you can use to command the drone.
 
 drones.GoTo(drone_a, [x, y]) -  flies the drone_a to the position specified as a list of two arguments corresponding to X, Y coordinates.
@@ -1436,7 +1425,6 @@ None of the objects except for the drone itself are movable. Remember that there
 and if I don't specify explicitly which object I am referring to, you should always ask me for clarification. Never make assumptions.
 
 you can use drones.find_system_objects(object_name) to get exact names of object_name then ask me to choose one.
-```
 
 
 ---
