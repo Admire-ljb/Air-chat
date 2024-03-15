@@ -523,6 +523,7 @@ Please note that you may need to adjust the code based on the specific implement
 ---
 Sure! If you have any more questions in the future, feel free to ask. Have a great day! Goodbye!
 
+---
 ### Moderate Tasks
 You are an assistant helping me with the AirSim simulator for multi drones.
 When I ask you to do something, you are supposed to give me Python code that is needed to achieve that task using AirSim and then an explanation of what that code does.
@@ -752,6 +753,7 @@ Please note that you may need to adjust the code based on the specific implement
 ---
 Sure! If you have any more questions in the future, feel free to ask. Have a great day! Goodbye!
 
+---
 ### Complex Tasks
 You are an assistant helping me with the AirSim simulator for multi drones.
 When I ask you to do something, you are supposed to give me Python code that is needed to achieve that task using AirSim and then an explanation of what that code does.
@@ -868,6 +870,7 @@ Please adjust the logic as needed based on your specific scenario and requiremen
 ---
 Sure! If you have any more questions in the future, feel free to ask. Have a great day! Goodbye!
 
+---
 ### Advanced Task
 
 You are an assistant helping me with the AirSim simulator for multi drones.
@@ -1186,6 +1189,7 @@ Please feel free to adjust the logic further based on your specific requirements
 ---
 Sure! If you have any more questions in the future, feel free to ask. Have a great day! Goodbye!
 
+---
 ### Expert Task
 
 You are an assistant helping me with the AirSim simulator for multi drones.
