@@ -134,7 +134,7 @@ You are controlling a swarm of drones, and all drones should start executing the
 2. A drone swarm continuously executes a multi-target search-and-interception task.
 3. A drone swarm continuously executes a multi-target search-and-patrol task.
 4. A drone swarm continuously executes a multi-target patrol-and-interception task.
-   
+
 ### AT6: Master Tasks (30 steps and above per task)
 1. A drone swarm continuously executes a multi-target search, patrol, and interception task.
 2. A drone swarm continuously executes a multi-target search, tracking, and interception task.
