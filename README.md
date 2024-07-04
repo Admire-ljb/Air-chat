@@ -122,16 +122,19 @@ You are controlling a swarm of drones, and all drones should start executing the
 2. A drone swarm continuously executes a single-target search, tracking, and interception task.
 3. A drone swarm continuously executes a single-target search, patrol, and tracking task.
 4. A drone swarm continuously executes a single-target search, patrol, tracking and interception task.
+   
 ### AT4: Advanced Tasks (16-20 steps per task)
 1. A drone swarm completes a multi-target search task.
 2. A drone swarm completes a multi-target tracking task.
 3. A drone swarm completes a multi-target interception task.
 4. A drone swarm completes a multi-target aerial patrol task.
+   
 ### AT5: Expert Tasks (21-25 steps per task)
 1. A drone swarm continuously executes a multi-target search-and-tracking task.
 2. A drone swarm continuously executes a multi-target search-and-interception task.
 3. A drone swarm continuously executes a multi-target search-and-patrol task.
 4. A drone swarm continuously executes a multi-target patrol-and-interception task.
+   
 ### AT6: Master Tasks (30 steps and above per task)
 1. A drone swarm continuously executes a multi-target search, patrol, and interception task.
 2. A drone swarm continuously executes a multi-target search, tracking, and interception task.
