@@ -106,44 +106,16 @@ You are controlling a swarm of drones, and all drones should start executing the
 
 ## Appendix B: Task Set
 ### AT1: Simple Tasks (1-5 steps per task)
-
-Basic Tasks
-
-1. Drone swarm simultaneously completes straight-line flight patrol mission.
-2. Drone swarm simultaneously completes patrol mission within a square area.
-3. Drone swarm simultaneously completes single-point hover mission and records environmental data.
-
-Cooperative Tasks
-
-1. Drone swarm simultaneously performs formation flight within a designated area.
-2. Drone swarm simultaneously tracks a moving target and records its path.
-3. Drone swarm simultaneously completes simple distributed area surveillance task.
-
-Operational Tasks
-
-1. Drone swarm simultaneously adjusts altitude and maintains stable hover.
-2. Drone swarm simultaneously adjusts speed to adapt to environmental changes.
-3. Drone swarm simultaneously adjusts angles to maintain formation.
-
-Responsive Tasks
-
-1. Drone swarm simultaneously makes real-time adjustments to environmental changes to avoid obstacles.
-2. Drone swarm simultaneously makes real-time adjustments to changes in target position to maintain tracking.
-3. Drone swarm simultaneously executes predetermined actions based on preset conditions, such as returning home or issuing warning signals.
-
-Mission planning
-
-1. Drone swarm simultaneously executes tasks according to flight plans, maintaining uniform actions.
-2. Drone swarm simultaneously adjusts flight trajectories based on preset commands to achieve dynamic flight.
-3. Drone swarm simultaneously reports and records task execution status, providing feedback to the control center.
+1. A drone swarm completes a single-target search task.
+2. A drone swarm completes a single-target tracking task.
+3. A drone swarm completes a single-target interception task.
+4. A drone swarm completes a single-target aerial patrol task.
 
 ### AT2: Moderate Tasks (6-10 steps per task)
-
-Basic Tasks
-
-1. Drone swarm simultaneously executes curved flight patrol mission in designated area while recording environmental data.
-2. Drone swarm simultaneously completes hover mission at specified locations, coordinating real-time environmental data collection.
-3. Drone swarm simultaneously completes complex environment target tracking mission, real-time recording target movement trajectory.
+1. A drone swarm continuously executes a single-target search-and-tracking task.
+2. A drone swarm continuously executes a single-target search-and-interception task.
+3. A drone swarm continuously executes a single-target search-and-patrol task.
+4. A drone swarm continuously executes a single-target patrol-and-interception task.
 
 Cooperative Tasks
 
