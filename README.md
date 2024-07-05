@@ -105,7 +105,7 @@ You are controlling a swarm of drones, and all drones should start executing the
 
 
 ## Appendix B: Task Set
-### AT1: Simple Tasks (1-5 steps per task)
+### ATs1: Simple Tasks (1-5 steps per task)
 1. A drone swarm completes a single-target search task.
 2. A drone swarm completes a single-target tracking task.
 3. A drone swarm completes a single-target interception task.
@@ -123,6 +123,7 @@ You are controlling a swarm of drones, and all drones should start executing the
 3. A drone swarm continuously executes a single-target search, patrol, and tracking task.
 4. A drone swarm continuously executes a single-target search, patrol, tracking and interception task.
    
+
 ### AT4: Advanced Tasks (16-20 steps per task)
 1. A drone swarm completes a multi-target search task.
 2. A drone swarm completes a multi-target tracking task.
