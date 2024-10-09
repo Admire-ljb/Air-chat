@@ -36,96 +36,7 @@ drones.GoToTarget("drone_a", "target_1")
 
 ---
 
-#### 3. **`is_find_target`**
-- **Purpose**:  Checks if a specified drone has found the target based on the image name.
-- **Parameters**:  
-   - drone_a (str): The name of the drone to check.  
-    - target_image_name (str): The name of the image representing the target to search for. If not specified, you can choose from the following options:
-        - "Alice"
-        - "Bob"
-        - "Charlie"
-        - "David"
-        - "Eve"
-        - "Frank"
-
-- **Example Usage**:
-  ```python
-   # Check if drone_a has found target_1
-   result = drones.is_find_target("drone_a", "Alice")
-   if result:
-       print("Target found!")
-   else:
-       print("Target not found.")
-   ```
-- **Notes**:
-   - Returns a boolean value: True if the target is found, otherwise False.
-
----
-
-#### 4. **`get_agents_name`**
-- **Purpose**: Retrieves the names of all drones that are available for control.  
-- **Parameters**:  
-   - None
-
-- **Example Usage**:
-  ```python
-   # Get a list of all controllable drones
-   drone_names = drones.get_agents_name()
-   print(drone_names)
-   ```
-- **Notes**:
-   - Returns a list of strings, where each string is the name of a drone.
-
----
-
-#### 5. **`get_system_objects`**
-- **Purpose**: Retrieves a list of system objects whose names contain the specified substring.  
-- **Parameters**:  
-   - object_name (str): A substring to search for in the system object names.
-
-- **Example Usage**:
-  ```python
-   # Find all system objects that contain "people" in their names
-   objects = drones.get_system_objects("people")
-   print(objects)
-   ```
-- **Notes**:
-   - Returns a list of strings, where each string is the name of an object in the system.
-   - The object_name is case-sensitive.
----
-
-#### 6. **`get_drone_position`**
-- **Purpose**: Retrieves the current X, Y coordinates of a specified drone.  
-- **Parameters**:  
-   - drone_name (str): The name of the drone whose position is being queried.
-
-- **Example Usage**:
-  ```python
-   # Get the position of drone_a
-   position = drones.get_drone_position("drone_a")
-   print(f"Drone position: {position}")
-   ```
-- **Notes**:
-   - Returns a list of two float values representing the X and Y coordinates of the drone.
-
----
-
-#### 7. **`reset`**
-- **Purpose**: Resets all drones to their initial state.  
-- **Parameters**:  
-   - None
-
-- **Example Usage**:
-  ```python
-   # Reset all drones to their starting positions
-   drones.reset()
-  ```
-- **Notes**:
-   - This command will reset all drones in the system to their default starting state and positions.
-
----
-
-#### 8. **`get_target_pose`**
+#### 3. **`get_target_pose`**
 - **Purpose**: Retrieves the X, Y coordinates of a specified target.  
 - **Parameters**:  
    - target_name (str): The name of the target whose position is being queried.
@@ -141,6 +52,99 @@ drones.GoToTarget("drone_a", "target_1")
    - The target_name must be a valid target in the system.
 
 ---
+
+#### 4. **`is_find_target`**
+- **Purpose**:  Checks if a specified drone has found the target based on the image name.
+- **Parameters**:  
+   - drone_a (str): The name of the drone to check.  
+    - target_image_name (str): The name of the image representing the target to search for. If not specified, you can choose from the following options:
+        - "Alice"
+        - "Bob"
+        - "Charlie"
+        - "David"
+        - "Eve"
+        - "Frank"
+
+- **Example Usage**:
+  ```python
+       # Check if drone_a has found the target image "Alice" and get the Unreal Engine instance name
+         instance_name = drones.is_find_target("drone_a", "Alice")
+         print(instance_name)  # Output will be the instance string name in Unreal Engine
+         
+         # Now, get the position of the target using the instance name
+         target_position = drones.get_target_pose(instance_name)
+         print(target_position)
+   ```
+- **Notes**:
+   - Returns the Unreal Engine instance string name of the target if found, otherwise None indicating that the target was not found.
+   - This instance name is necessary to use functions like get_target_pose to retrieve the target's position.
+
+---
+
+#### 5. **`get_agents_name`**
+- **Purpose**: Retrieves the names of all drones that are available for control.  
+- **Parameters**:  
+   - None
+
+- **Example Usage**:
+  ```python
+   # Get a list of all controllable drones
+   drone_names = drones.get_agents_name()
+   print(drone_names)
+   ```
+- **Notes**:
+   - Returns a list of strings, where each string is the name of a drone.
+
+---
+
+#### 6. **`get_system_objects`**
+- **Purpose**: Retrieves a list of system objects whose names contain the specified substring.  
+- **Parameters**:  
+   - object_name (str): A substring to search for in the system object names.
+
+- **Example Usage**:
+  ```python
+   # Find all system objects that contain "people" in their names
+   objects = drones.get_system_objects("people")
+   print(objects)
+   ```
+- **Notes**:
+   - Returns a list of strings, where each string is the name of an object in the system.
+   - The object_name is case-sensitive.
+---
+
+#### 7. **`get_drone_position`**
+- **Purpose**: Retrieves the current X, Y coordinates of a specified drone.  
+- **Parameters**:  
+   - drone_name (str): The name of the drone whose position is being queried.
+
+- **Example Usage**:
+  ```python
+   # Get the position of drone_a
+   position = drones.get_drone_position("drone_a")
+   print(f"Drone position: {position}")
+   ```
+- **Notes**:
+   - Returns a list of two float values representing the X and Y coordinates of the drone.
+
+---
+
+#### 8. **`reset`**
+- **Purpose**: Resets all drones to their initial state.  
+- **Parameters**:  
+   - None
+
+- **Example Usage**:
+  ```python
+   # Reset all drones to their starting positions
+   drones.reset()
+  ```
+- **Notes**:
+   - This command will reset all drones in the system to their default starting state and positions.
+
+---
+
+
 
 #### 9. **`roll_back`**
 - **Purpose**: Reverts all drones to their previous positions.  
