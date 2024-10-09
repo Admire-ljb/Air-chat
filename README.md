@@ -66,7 +66,7 @@ drones.GoToTarget("drone_a", "target_1")
    # Get a list of all controllable drones
    drone_names = drones.get_agents_name()
    print(drone_names)
-```
+   ```
 - **Notes**:
    - Returns a list of strings, where each string is the name of a drone.
 
