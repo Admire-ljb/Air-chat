@@ -14,7 +14,23 @@
 ```python
 # Make drone_a fly to the position (10.5, 20.0)
 drones.GoTo("drone_a", [10.5, 20.0])
+```
+**Notes**:
+Coordinates must be a list of two float values representing X and Y positions.
 
+**Primitive**: `GoToTarget`  
+**Purpose**: Commands a specific drone to fly to a specified target's position.  
+**Parameters**:  
+- `drone_a (str)`: The name of the drone to command.  
+- `target_a (str)`: The name of the target the drone will fly to.  
+
+**Example Usage**:  
+```python
+# Make drone_a fly to the position of target_1
+drones.GoToTarget("drone_a", "target_1")
+```
+**Notes**:
+The target must be a valid object in the scene.
 
 ## Appendix B: Prompts
 ### basic prompt
