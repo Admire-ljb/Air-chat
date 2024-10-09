@@ -56,6 +56,22 @@ drones.GoToTarget("drone_a", "target_1")
 
 ---
 
+#### 4. **`get_agents_name`**
+- **Purpose**: Retrieves the names of all drones that are available for control.  
+- **Parameters**:  
+   - None
+
+- **Example Usage**:
+  ```python
+   # Get a list of all controllable drones
+   drone_names = drones.get_agents_name()
+   print(drone_names)
+```
+- **Notes**:
+   - Returns a list of strings, where each string is the name of a drone.
+
+---
+
 ## Appendix B: Prompts
 ### basic prompt
 Here are some functions you can use to command the drone.
