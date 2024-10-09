@@ -40,13 +40,14 @@ drones.GoToTarget("drone_a", "target_1")
 - **Purpose**:  Checks if a specified drone has found the target based on the image name.
 - **Parameters**:  
    - drone_a (str): The name of the drone to check.  
-    - target_image_name (str, optional): The name of the image representing the target to search for. If not specified, defaults to a predefined set of names. Possible names include: 
-     - "Alice"
-     - "Bob"
-     - "Charlie"
-     - "David"
-     - "Eve"
-     - "Frank"
+    - target_image_name (str): The name of the image representing the target to search for. If not specified, you can choose from the following options:
+        - "Alice"
+        - "Alice"
+        - "Bob"
+        - "Charlie"
+        - "David"
+        - "Eve"
+        - "Frank"
 
 - **Example Usage**:
   ```python
