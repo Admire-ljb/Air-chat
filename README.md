@@ -34,6 +34,28 @@ drones.GoToTarget("drone_a", "target_1")
 - **Notes**:
    - The target must be a valid object in the scene.
 
+---
+
+#### 3. **`is_find_target`**
+- **Purpose**: Checks if a specified drone has found the target.  
+- **Parameters**:  
+   - drone_a (str): The name of the drone to check.  
+   - target_a (str): The name of the target to search for.
+
+- **Example Usage**:
+  ```python
+   # Check if drone_a has found target_1
+   result = drones.is_find_target("drone_a", "target_1")
+   if result:
+       print("Target found!")
+   else:
+       print("Target not found.")
+   ```
+- **Notes**:
+   - Returns a boolean value: True if the target is found, otherwise False.
+
+---
+
 ## Appendix B: Prompts
 ### basic prompt
 Here are some functions you can use to command the drone.
