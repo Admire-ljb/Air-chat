@@ -1,6 +1,7 @@
 # Appendix
 ## Appendix A: Action primitives
 ### basic action primitives
+---
 
 
 **Primitive**: `GoTo`  
@@ -16,6 +17,7 @@ drones.GoTo("drone_a", [10.5, 20.0])
 ```
 **Notes**:
 Coordinates must be a list of two float values representing X and Y positions.
+
 ---
 
 **Primitive**: `GoToTarget`  
