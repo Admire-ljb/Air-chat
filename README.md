@@ -72,6 +72,21 @@ drones.GoToTarget("drone_a", "target_1")
 
 ---
 
+#### 5. **`get_system_objects`**
+- **Purpose**: Retrieves a list of system objects whose names contain the specified substring.  
+- **Parameters**:  
+   - object_name (str): A substring to search for in the system object names.
+
+- **Example Usage**:
+  ```python
+   # Find all system objects that contain "people" in their names
+   objects = drones.get_system_objects("people")
+   print(objects)
+   ```
+- **Notes**:
+   - Returns a list of strings, where each string is the name of an object in the system.
+   - The object_name is case-sensitive.
+
 ## Appendix B: Prompts
 ### basic prompt
 Here are some functions you can use to command the drone.
