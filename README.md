@@ -11,7 +11,7 @@
    - coordinates (list[float, float]): The X, Y coordinates for the drone to fly to.
 
 - **Example Usage**:
-   - ```python
+  ```python
    # Make drone_a fly to the position (10.5, 20.0)
    drones.GoTo("drone_a", [10.5, 20.0])
    ```
