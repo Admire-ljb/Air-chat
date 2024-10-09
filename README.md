@@ -37,10 +37,16 @@ drones.GoToTarget("drone_a", "target_1")
 ---
 
 #### 3. **`is_find_target`**
-- **Purpose**: Checks if a specified drone has found the target.  
+- **Purpose**:  Checks if a specified drone has found the target based on the image name.
 - **Parameters**:  
    - drone_a (str): The name of the drone to check.  
-   - target_a (str): The name of the target to search for.
+    - target_image_name (str, optional): The name of the image representing the target to search for. If not specified, defaults to a predefined set of names. Possible names include: 
+     - "Alice"
+     - "Bob"
+     - "Charlie"
+     - "David"
+     - "Eve"
+     - "Frank"
 
 - **Example Usage**:
   ```python
@@ -172,6 +178,21 @@ drones.GoToTarget("drone_a", "target_1")
    - This function internally calls drones.GoTo for each drone in the swarm to move them to their respective positions.
 
 ---
+
+####  2. **`move_all_to_target`**
+- **Purpose**: Moves all drones to the target’s position.  
+- **Parameters**:  
+   - target_name (str): The name of the target to find and move towards.
+
+- **Example Usage**:
+  ```python
+      # Find and move all drones to target_1
+      drones.find_and_move_to_target("target_1")
+  ```
+- **Notes**:
+   - This function will first use drones.get_target_pose to find the target’s position and then move all drones using drones.GoTo.
+   - If the target is not found, an error message will be returned.
+     
 
 ## Appendix B: Prompts
 ### basic prompt
