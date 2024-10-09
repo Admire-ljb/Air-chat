@@ -4,7 +4,7 @@
 ---
 
 
-**Primitive**: `GoTo`  
+#### `GoTo`  
 **Purpose**: Commands a specific drone to fly to a specified X, Y coordinate.  
 **Parameters**:  
 - `drone_a (str)`: The name of the drone to command.  
@@ -20,7 +20,7 @@ Coordinates must be a list of two float values representing X and Y positions.
 
 ---
 
-**Primitive**: `GoToTarget`  
+#### `GoToTarget`  
 **Purpose**: Commands a specific drone to fly to a specified target's position.  
 **Parameters**:  
 - `drone_a (str)`: The name of the drone to command.  
