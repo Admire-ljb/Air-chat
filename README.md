@@ -86,6 +86,7 @@ drones.GoToTarget("drone_a", "target_1")
 - **Notes**:
    - Returns a list of strings, where each string is the name of an object in the system.
    - The object_name is case-sensitive.
+---
 
 #### 6. **`get_drone_position`**
 - **Purpose**: Retrieves the current X, Y coordinates of a specified drone.  
@@ -100,7 +101,54 @@ drones.GoToTarget("drone_a", "target_1")
    ```
 - **Notes**:
    - Returns a list of two float values representing the X and Y coordinates of the drone.
-  
+
+---
+
+#### 7. **`reset`**
+- **Purpose**: Resets all drones to their initial state.  
+- **Parameters**:  
+   - None
+
+- **Example Usage**:
+  ```python
+   # Reset all drones to their starting positions
+   drones.reset()
+  ```
+- **Notes**:
+   - This command will reset all drones in the system to their default starting state and positions.
+
+---
+
+#### 8. **`get_target_pose`**
+- **Purpose**: Retrieves the X, Y coordinates of a specified target.  
+- **Parameters**:  
+   - target_name (str): The name of the target whose position is being queried.
+
+- **Example Usage**:
+  ```python
+   # Get the position of target_1
+   target_position = drones.get_target_pose("target_1")
+   print(f"Target position: {target_position}")
+   ```
+- **Notes**:
+   - Returns a list of two float values representing the X and Y coordinates of the target.
+   - The target_name must be a valid target in the system.
+
+---
+
+#### 9. **`roll_back`**
+- **Purpose**: Reverts all drones to their previous positions.  
+- **Parameters**:  
+   - None
+
+- **Example Usage**:
+  ```python
+   # Roll back all drones to their previous positions
+   drones.roll_back()
+  ```
+- **Notes**:
+   - This function is typically used when the user believes the last movement or action was incorrect.
+   - It undoes the last position change for all drones.
 
 ## Appendix B: Prompts
 ### basic prompt
