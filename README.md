@@ -20,19 +20,19 @@
 
 ---
 
-#### 1. `GoToTarget`  
-**Purpose**: Commands a specific drone to fly to a specified target's position.  
-**Parameters**:  
-- drone_a (str): The name of the drone to command.  
-- target_a (str): The name of the target the drone will fly to.  
+#### 2. `GoToTarget`  
+- **Purpose**: Commands a specific drone to fly to a specified target's position.  
+- **Parameters**:  
+   - drone_a (str): The name of the drone to command.  
+   - target_a (str): The name of the target the drone will fly to.  
 
-**Example Usage**:  
+- **Example Usage**:  
 ```python
 # Make drone_a fly to the position of target_1
 drones.GoToTarget("drone_a", "target_1")
 ```
-**Notes**:
-The target must be a valid object in the scene.
+- **Notes**:
+   - The target must be a valid object in the scene.
 
 ## Appendix B: Prompts
 ### basic prompt
