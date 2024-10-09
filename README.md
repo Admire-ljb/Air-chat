@@ -5,18 +5,18 @@
 
 
 ####  **`GoTo`**
-**Purpose**: Commands a specific drone to fly to a specified X, Y coordinate.  
-**Parameters**:  
-- drone_a (str): The name of the drone to command.  
-- coordinates (list[float, float]): The X, Y coordinates for the drone to fly to.
+- **Purpose**: Commands a specific drone to fly to a specified X, Y coordinate.  
+- **Parameters**:  
+   - drone_a (str): The name of the drone to command.  
+   - coordinates (list[float, float]): The X, Y coordinates for the drone to fly to.
 
-**Example Usage**:
-```python
-# Make drone_a fly to the position (10.5, 20.0)
-drones.GoTo("drone_a", [10.5, 20.0])
-```
-**Notes**:
-Coordinates must be a list of two float values representing X and Y positions.
+- **Example Usage**:
+   - ```python
+   # Make drone_a fly to the position (10.5, 20.0)
+   drones.GoTo("drone_a", [10.5, 20.0])
+   ```
+- **Notes**:
+   - Coordinates must be a list of two float values representing X and Y positions.
 
 ---
 
