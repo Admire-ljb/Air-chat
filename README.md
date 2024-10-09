@@ -20,7 +20,7 @@
 
 ---
 
-#### `GoToTarget`  
+#### 1. `GoToTarget`  
 **Purpose**: Commands a specific drone to fly to a specified target's position.  
 **Parameters**:  
 - drone_a (str): The name of the drone to command.  
