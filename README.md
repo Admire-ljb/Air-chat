@@ -1,6 +1,6 @@
 # Appendix
 ## Appendix A: Action primitives
-### basic action primitives
+### Basic action primitives
 ---
 
 
@@ -149,6 +149,8 @@ drones.GoToTarget("drone_a", "target_1")
 - **Notes**:
    - This function is typically used when the user believes the last movement or action was incorrect.
    - It undoes the last position change for all drones.
+
+### Advanced action primitives
 
 ## Appendix B: Prompts
 ### basic prompt
