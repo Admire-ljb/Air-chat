@@ -87,6 +87,21 @@ drones.GoToTarget("drone_a", "target_1")
    - Returns a list of strings, where each string is the name of an object in the system.
    - The object_name is case-sensitive.
 
+#### 6. **`get_drone_position`**
+- **Purpose**: Retrieves the current X, Y coordinates of a specified drone.  
+- **Parameters**:  
+   - drone_name (str): The name of the drone whose position is being queried.
+
+- **Example Usage**:
+  ```python
+   # Get the position of drone_a
+   position = drones.get_drone_position("drone_a")
+   print(f"Drone position: {position}")
+   ```
+- **Notes**:
+   - Returns a list of two float values representing the X and Y coordinates of the drone.
+  
+
 ## Appendix B: Prompts
 ### basic prompt
 Here are some functions you can use to command the drone.
