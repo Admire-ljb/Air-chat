@@ -7,8 +7,8 @@
 #### `GoTo`  
 **Purpose**: Commands a specific drone to fly to a specified X, Y coordinate.  
 **Parameters**:  
-- `drone_a (str)`: The name of the drone to command.  
-- `coordinates (list[float, float])`: The X, Y coordinates for the drone to fly to.
+- drone_a (str): The name of the drone to command.  
+- coordinates (list[float, float]): The X, Y coordinates for the drone to fly to.
 
 **Example Usage**:
 ```python
@@ -23,8 +23,8 @@ Coordinates must be a list of two float values representing X and Y positions.
 #### `GoToTarget`  
 **Purpose**: Commands a specific drone to fly to a specified target's position.  
 **Parameters**:  
-- `drone_a (str)`: The name of the drone to command.  
-- `target_a (str)`: The name of the target the drone will fly to.  
+- drone_a (str): The name of the drone to command.  
+- target_a (str): The name of the target the drone will fly to.  
 
 **Example Usage**:  
 ```python
