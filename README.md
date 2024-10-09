@@ -42,7 +42,6 @@ drones.GoToTarget("drone_a", "target_1")
    - drone_a (str): The name of the drone to check.  
     - target_image_name (str): The name of the image representing the target to search for. If not specified, you can choose from the following options:
         - "Alice"
-        - "Alice"
         - "Bob"
         - "Charlie"
         - "David"
@@ -52,7 +51,7 @@ drones.GoToTarget("drone_a", "target_1")
 - **Example Usage**:
   ```python
    # Check if drone_a has found target_1
-   result = drones.is_find_target("drone_a", "target_1")
+   result = drones.is_find_target("drone_a", "Alice")
    if result:
        print("Target found!")
    else:
