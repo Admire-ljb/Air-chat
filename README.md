@@ -151,6 +151,27 @@ drones.GoToTarget("drone_a", "target_1")
    - It undoes the last position change for all drones.
 
 ### Advanced action primitives
+---
+
+####  1. **`move_all_to_positions`**
+- **Purpose**: Moves all drones to their respective target positions simultaneously. 
+- **Parameters**:  
+   - drone_positions (dict): A dictionary where keys are drone names and values are the target positions (X, Y coordinates) for each drone.
+
+- **Example Usage**:
+  ```python
+      # Move multiple drones to their respective positions
+      drones_positions = {
+          "drone_a": [10, 15],
+          "drone_b": [20, 30],
+          "drone_c": [5, 25]
+      }
+      drones.move_all_to_positions(drones_positions)
+   ```
+- **Notes**:
+   - This function internally calls drones.GoTo for each drone in the swarm to move them to their respective positions.
+
+---
 
 ## Appendix B: Prompts
 ### basic prompt
