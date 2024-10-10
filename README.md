@@ -455,13 +455,13 @@ drones.GoToTarget("drone_a", "target_1")
 
 ## Appendix B: Prompts
 ### basic user prompt
-Role：[Link to Special Scene Configuration](#Initial-system)
+Role：[Initial system](#Initial-system)
 
-Here are some functions you can use to command the drone: {basic primitives}
+Here are some functions you can use to command the drone: [Initial system](#basic-action-primitives)
 
-Write the code to accomplish following task: {task description}
+Write the code to accomplish following task: {[task description](#task-description)} 
 
-A few useful things: {scenario specific configuration}
+A few useful things: {[scenario specific configuration](#scenario-specific-configuration)}
 
 
 ### Initial system
