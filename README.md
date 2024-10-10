@@ -3,8 +3,44 @@
 ### Basic action primitives
 ---
 
+#### 1. **`hover_at_height`**
+- **Purpose**: Commands a specified drone to hover at a specified height while maintaining its current X, Y position.  
+- **Parameters**:  
+   - `drone_name` (str): The name of the drone to command.  
+   - `height` (float): The height at which the drone should hover.
 
-####  1. **`GoTo`**
+- **Example Usage**:
+  ```python
+  # Make drone_a hover at a height of 10.0 units
+  drones.hover_at_height("drone_a", 10.0)
+  ```
+- **Notes**:
+  - The height must be a positive float value.
+  - If the specified drone is not available, an error message will be returned.
+  - The drone will maintain its current X, Y coordinates while hovering at the specified height.
+
+---
+
+#### 2. **`explore_in_direction`**
+- **Purpose**: Commands a specified drone to explore in a given direction for a set distance.  
+- **Parameters**:  
+   - `drone_name` (str): The name of the drone to command.  
+   - `direction` (float): The angle (in degrees) indicating the direction of exploration, where 0° is along the positive X-axis.  
+   - `distance` (float): The distance the drone should travel in the specified direction.
+
+- **Example Usage**:
+  ```python
+  # Make drone_a explore in the direction of 45° for 20 units
+  drones.explore_in_direction("drone_a", 45.0, 20.0)
+  ```
+- **Notes**:
+   - The direction should be provided as a float representing degrees, where 0° is along the positive X-axis, and angles increase counterclockwise.
+   - The distance must be a positive float value.
+   - If the specified drone is not available, an error message will be returned.
+
+---
+
+####  3. **`GoTo`**
 - **Purpose**: Commands a specific drone to fly to a specified X, Y coordinate.  
 - **Parameters**:  
    - drone_a (str): The name of the drone to command.  
@@ -20,7 +56,7 @@
 
 ---
 
-#### 2. `GoToTarget`  
+#### 4. `GoToTarget`  
 - **Purpose**: Commands a specific drone to fly to a specified target's position.  
 - **Parameters**:  
    - drone_a (str): The name of the drone to command.  
@@ -36,7 +72,7 @@ drones.GoToTarget("drone_a", "target_1")
 
 ---
 
-#### 3. **`get_target_pose`**
+#### 5. **`get_target_pose`**
 - **Purpose**: Retrieves the X, Y coordinates of a specified target.  
 - **Parameters**:  
    - target_name (str): The name of the target whose position is being queried.
@@ -53,7 +89,7 @@ drones.GoToTarget("drone_a", "target_1")
 
 ---
 
-#### 4. **`is_find_target`**
+#### 6. **`is_find_target`**
 - **Purpose**:  Checks if a specified drone has found the target based on the image name.
 - **Parameters**:  
    - drone_a (str): The name of the drone to check.  
@@ -81,7 +117,7 @@ drones.GoToTarget("drone_a", "target_1")
 
 ---
 
-#### 5. **`get_agents_name`**
+#### 7. **`get_agents_name`**
 - **Purpose**: Retrieves the names of all drones that are available for control.  
 - **Parameters**:  
    - None
@@ -97,7 +133,7 @@ drones.GoToTarget("drone_a", "target_1")
 
 ---
 
-#### 6. **`get_system_objects`**
+#### 8. **`get_system_objects`**
 - **Purpose**: Retrieves a list of system objects whose names contain the specified substring.  
 - **Parameters**:  
    - object_name (str): A substring to search for in the system object names.
@@ -113,7 +149,7 @@ drones.GoToTarget("drone_a", "target_1")
    - The object_name is case-sensitive.
 ---
 
-#### 7. **`get_drone_position`**
+#### 9. **`get_drone_position`**
 - **Purpose**: Retrieves the current X, Y coordinates of a specified drone.  
 - **Parameters**:  
    - drone_name (str): The name of the drone whose position is being queried.
@@ -129,7 +165,7 @@ drones.GoToTarget("drone_a", "target_1")
 
 ---
 
-#### 8. **`reset`**
+#### 10. **`reset`**
 - **Purpose**: Resets all drones to their initial state.  
 - **Parameters**:  
    - None
@@ -146,7 +182,7 @@ drones.GoToTarget("drone_a", "target_1")
 
 
 
-#### 9. **`roll_back`**
+#### 11. **`roll_back`**
 - **Purpose**: Reverts all drones to their previous positions.  
 - **Parameters**:  
    - None
@@ -163,40 +199,115 @@ drones.GoToTarget("drone_a", "target_1")
 ### Advanced action primitives
 ---
 
-####  1. **`move_all_to_positions`**
-- **Purpose**: Moves all drones to their respective target positions simultaneously. 
+#### 1. **`move_drones_to_positions`**
+- **Purpose**: Moves specified drones to given X, Y coordinates in a batch.  
 - **Parameters**:  
-   - drone_positions (dict): A dictionary where keys are drone names and values are the target positions (X, Y coordinates) for each drone.
+   - `coordinates_list` (list[list[float, float]]): A list of [X, Y] coordinates for each drone to fly to.  
+   - `drone_list` (list[str], optional): A list of drone names to command. Defaults to all available drones.
 
 - **Example Usage**:
   ```python
-      # Move multiple drones to their respective positions
-      drones_positions = {
-          "drone_a": [10, 15],
-          "drone_b": [20, 30],
-          "drone_c": [5, 25]
-      }
-      drones.move_all_to_positions(drones_positions)
+  # Make all drones move to their respective positions
+  drones.move_drones_to_positions([[10.5, 20.0], [15.0, 25.0]])
+  
+  # Make specific drones move to their respective positions
+  drones.move_drones_to_positions([[10.5, 20.0], [15.0, 25.0]], ["drone_a", "drone_b"])
+
    ```
 - **Notes**:
-   - This function internally calls drones.GoTo for each drone in the swarm to move them to their respective positions.
+   - The coordinates_list must match the number of drones specified in drone_list.
+   - If the number of coordinates does not match the number of drones or any specified drone is not available, an error message will be returned.
+   - If no drone list is provided, all available drones will be included in the command.
 
 ---
 
-####  2. **`move_all_to_target`**
-- **Purpose**: Moves all drones to the target’s position.  
+#### 2. **`move_drones_to_target`**
+- **Purpose**: Moves specified drones to the target’s position.  
 - **Parameters**:  
-   - target_name (str): The name of the target to find and move towards.
+   - `target_name` (str): The name of the target to find and move towards.  
+   - `drone_list` (list[str], optional): A list of drone names to command. Defaults to all available drones.
 
 - **Example Usage**:
   ```python
-      # Find and move all drones to target_1
-      drones.find_and_move_to_target("target_1")
+  # Find and move all drones to target_1
+  drones.move_drones_to_target("target_1")
+  
+  # Move specific drones to the position of target_1
+  drones.move_drones_to_target("target_1", ["drone_a", "drone_b"])
+
   ```
 - **Notes**:
-   - This function will first use drones.get_target_pose to find the target’s position and then move all drones using drones.GoTo.
+   - This function will first use drones.get_target_pose to find the target’s position and then move the specified drones using drones.GoTo.
+   - If the target is not found, or if any specified drone is not available, an error message will be returned.
+   - If no drone list is provided, all available drones will be included in the command.
+
+---
+
+#### 3. **`circle_around_target`**
+- **Purpose**: Commands specified drones to fly in a circular formation around a specified target.  
+- **Parameters**:  
+   - `target_name` (str): The name of the target to circle around.  
+   - `radius` (float): The radius of the circular path.  
+   - `drone_list` (list[str], optional): A list of drone names to include in the formation. Defaults to all available drones.
+
+- **Example Usage**:
+  ```python
+  # Make all drones circle around target_1 with a radius of 5.0
+  drones.circle_around_target("target_1", 5.0)
+  
+  # Make specific drones circle around target_1
+  drones.circle_around_target("target_1", 5.0, ["drone_a", "drone_b"])
+   ```
+- **Notes**:
+   - The drones will evenly distribute themselves along the circular path around the target.
+   - The function will first retrieve the target’s position using drones.get_target_pose.
    - If the target is not found, an error message will be returned.
-     
+   - Drones will maintain the specified radius while adjusting their positions to circle the target.
+   - If no drone list is provided, all available drones will be included in the formation.
+---
+ 
+#### 4. **`formation_flight`**
+- **Purpose**: Commands specified drones to fly in a specified formation.  
+- **Parameters**:  
+   - `formation_type` (str): The type of formation (e.g., "line", "triangle", "square").  
+   - `distance` (float): The distance between drones in the formation.  
+   - `drone_list` (list[str], optional): A list of drone names to include in the formation. Defaults to all available drones.
+
+- **Example Usage**:
+  ```python
+  # Make all drones fly in a line formation with a distance of 3.0 units
+  drones.formation_flight("line", 3.0)
+  
+  # Make specific drones fly in a triangle formation with a distance of 2.0 units
+  drones.formation_flight("triangle", 2.0, ["drone_a", "drone_b", "drone_c"])
+
+  ```
+- **Notes**:
+   - If the formation type is invalid, an error message will be returned.
+   - Drones will maintain the specified distance while adjusting to the leader’s movements if necessary.
+   - Once the drones are in formation, any movement command given to an individual drone will apply to the entire formation until the formation is canceled.
+   - If no drone list is provided, all available drones will be included in the formation.
+
+---
+#### 5. **`cancel_formation`**
+- **Purpose**: Cancels the current formation of specified drones, allowing them to operate independently.  
+- **Parameters**:  
+   - `drone_list` (list[str], optional): A list of drone names to cancel the formation for. Defaults to all drones in formation.
+
+- **Example Usage**:
+  ```python
+  # Cancel the formation for all drones
+  drones.cancel_formation()
+  
+  # Cancel the formation for specific drones
+  drones.cancel_formation(["drone_a", "drone_b"])
+ ```
+- **Notes**:
+   - This function will revert the specified drones back to individual control, ending any formation behaviors.
+   - If no drone list is provided, the cancellation will apply to all drones currently in formation.
+   - After cancellation, the drones can respond to individual movement commands independently.
+   - If the specified drones are not currently in a formation, an error message will be returned.
+
 
 ## Appendix B: Prompts
 ### basic prompt
