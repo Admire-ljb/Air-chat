@@ -414,12 +414,11 @@ drones.GoToTarget("drone_a", "target_1")
    # Command all drones to automatically detect and attack targets for 30 seconds within a range of 100.0 units
     drones.auto_detect_and_attack(100.0, 30.0, "enemy_1")
    # Command specific drones to perform automatic detection and attack for 20 seconds within a range of 50.0 units against "enemy_2"
-    ```
     drones.auto_detect_and_attack(50.0, 20.0, "enemy_2", ["drone_a", "drone_b"])
     ```
 
 - **Notes**:
-   - The drones will utilize the `get_system_target` function to identify and locate enemy targets with the specified name within the detection range.
+   - The drones will utilize the `get_system_objects` function to identify and locate enemy targets with the specified name within the detection range.
    - Once targets are detected, the drones will automatically engage with them using appropriate attack maneuvers for the specified duration.
    - If no enemy targets are found within the detection range, an informational message will be returned.
    - If any specified drone is not available, the command will apply only to the available drones.
@@ -427,7 +426,31 @@ drones.GoToTarget("drone_a", "target_1")
 
 ---
 
-     
+### 12. **`coordinate_search`**
+
+- **Purpose**: Commands multiple drones to collaborate in searching an area, dividing the search region evenly among the drones.
+
+- **Parameters**:  
+   - `area` (list[float, float]): A list of [X, Y] coordinates defining the overall search area.  
+   - `drone_list` (list[str], optional): A list of drone names to participate in the search. Defaults to all available drones.
+
+- **Example Usage**:
+   ```python
+   # Coordinate a search with all drones in the specified area
+   drones.coordinate_search([[0.0, 0.0], [50.0, 50.0]])
+
+   # Coordinate a search with specific drones
+   drones.coordinate_search([[0.0, 0.0], [50.0, 50.0]], ["drone_a", "drone_b"])
+    ```
+
+- **Notes**:
+   - The search area will be divided into sections, with each drone responsible for searching a specific segment.
+   - If a drone finishes searching its segment, it may assist others in nearby sections.
+   - If no drone list is provided, all available drones will participate in the search.
+   - An error message will be returned if any specified drone is unavailable.
+
+---
+
 ## Appendix B: Prompts
 ### basic prompt
 Here are some functions you can use to command the drone.
