@@ -308,7 +308,97 @@ drones.GoToTarget("drone_a", "target_1")
    - After cancellation, the drones can respond to individual movement commands independently.
    - If the specified drones are not currently in a formation, an error message will be returned.
 
+---
 
+#### 7. **`patrol_between_points`**
+- **Purpose**: Commands specified drones to move in a loop between two or more specified points.
+- **Parameters**:  
+   - `points` (list[list[float, float]]): A list of [X, Y] coordinates representing the patrol points.  
+   - `drone_list` (list[str], optional): A list of drone names to command. Defaults to all available drones.
+
+- **Example Usage**:
+  ```python
+  # Make all drones patrol between the specified points
+  drones.patrol_between_points([[10.0, 20.0], [15.0, 25.0], [20.0, 30.0]])
+
+  # Make specific drones patrol between the specified points
+  drones.patrol_between_points([[10.0, 20.0], [15.0, 25.0]], ["drone_a", "drone_b"])
+  ```
+- **Notes**:
+   - The drones will move continuously in a loop between the specified points.
+   - If any specified drone is not available, an error message will be returned, and the command will apply only to the available drones.
+   - Drones will maintain their altitude while patrolling between the given coordinates.
+     
+--- 
+
+#### 8. **`escort_target`**
+- **Purpose**: Commands specified drones to follow and protect a moving target, maintaining a certain formation around it.
+- **Parameters**:  
+   - `target_name` (str): The name of the target to follow.  
+   - `formation_type` (str): The type of formation (e.g., "line", "triangle", "square") to maintain around the target.  
+   - `drone_list` (list[str], optional): A list of drone names to command. Defaults to all available drones.
+
+- **Example Usage**:
+  ```python
+  # Make all drones escort target_1 in a line formation
+  drones.escort_target("target_1", "line")
+
+  # Make specific drones escort target_1 in a triangle formation
+  drones.escort_target("target_1", "triangle", ["drone_a", "drone_b"])
+  ```
+  
+- **Notes**:
+   - The drones will adjust their positions to maintain the specified formation around the target as it moves.
+   - If the target is not found, an error message will be returned.
+   - If any specified drone is not available, the command will apply only to the available drones.
+
+---
+
+#### 9. **`swarm_search_pattern`**
+- **Purpose**: Commands specified drones to conduct a coordinated search of an area using predefined patterns (e.g., grid, spiral).
+- **Parameters**:  
+   - `pattern_type` (str): The type of search pattern to use (e.g., "grid", "spiral").  
+   - `area` (list[float, float]): A list containing the coordinates defining the search area.  
+   - `drone_list` (list[str], optional): A list of drone names to command. Defaults to all available drones.
+
+- **Example Usage**:
+  ```python
+  # Make all drones perform a grid search in the specified area
+  drones.swarm_search_pattern("grid", [[0.0, 0.0], [10.0, 10.0]])
+
+  # Make specific drones perform a spiral search in the specified area
+  drones.swarm_search_pattern("spiral", [[5.0, 5.0], [15.0, 15.0]], ["drone_a", "drone_b"])
+  ```
+- **Notes**:
+   - The drones will coordinate their movements to effectively cover the search area based on the specified pattern.
+   - If the specified pattern type is invalid, an error message will be returned.
+   - If any specified drone is not available, the command will apply only to the available drones.
+
+---
+
+#### 10. **`attack_target`**
+- **Purpose**: Commands specified drones to move towards and engage with a designated target for attack.
+- **Parameters**:  
+   - `target_name` (str): The name of the target to engage with.  
+   - `drone_list` (list[str], optional): A list of drone names to command. Defaults to all available drones.
+
+- **Example Usage**:
+   ```python
+     # Command all drones to attack target_1
+    
+    drones.attack_target("target_1")
+     # Command specific drones to attack target_2
+    drones.attack_target("target_2", ["drone_a", "drone_b"])
+    ```
+
+- **Notes**:
+   - The drones will navigate towards the target and initiate engagement procedures.
+   - If the specified target is invalid or not found, an error message will be returned.
+   - If any specified drone is not available, the command will apply only to the available drones.
+
+---
+
+     
 ## Appendix B: Prompts
 ### basic prompt
 Here are some functions you can use to command the drone.
