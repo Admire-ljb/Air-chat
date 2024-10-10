@@ -280,8 +280,8 @@ drones.GoToTarget("drone_a", "target_1")
   
   # Make specific drones fly in a triangle formation with a distance of 2.0 units
   drones.formation_flight("triangle", 2.0, ["drone_a", "drone_b", "drone_c"])
-
   ```
+  
 - **Notes**:
    - If the formation type is invalid, an error message will be returned.
    - Drones will maintain the specified distance while adjusting to the leader’s movements if necessary.
@@ -325,6 +325,7 @@ drones.GoToTarget("drone_a", "target_1")
   # Make specific drones patrol between the specified points
   drones.patrol_between_points([[10.0, 20.0], [15.0, 25.0]], ["drone_a", "drone_b"])
   ```
+
 - **Notes**:
    - The drones will move continuously in a loop between the specified points.
    - If any specified drone is not available, an error message will be returned, and the command will apply only to the available drones.
@@ -370,6 +371,7 @@ drones.GoToTarget("drone_a", "target_1")
   # Make specific drones perform a spiral search in the specified area
   drones.swarm_search_pattern("spiral", [[5.0, 5.0], [15.0, 15.0]], ["drone_a", "drone_b"])
   ```
+  
 - **Notes**:
    - The drones will coordinate their movements to effectively cover the search area based on the specified pattern.
    - If the specified pattern type is invalid, an error message will be returned.
