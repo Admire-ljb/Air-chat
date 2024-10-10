@@ -457,7 +457,7 @@ drones.GoToTarget("drone_a", "target_1")
 ### basic user prompt
 Role：[Initial system](#Initial-system)
 
-Here are some functions you can use to command the drone: [Initial system](#basic-action-primitives)
+Here are some functions you can use to command the drone: {[Basic action primitives](#Basic-action-primitives)}
 
 Write the code to accomplish following task: {[task description](#task-description)} 
 
