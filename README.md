@@ -410,12 +410,12 @@ drones.GoToTarget("drone_a", "target_1")
    - `drone_list` (list[str], optional): A list of drone names to command. Defaults to all available drones.
 
 - **Example Usage**:
- ```python
+    ```python
    # Command all drones to automatically detect and attack targets for 30 seconds within a range of 100.0 units
     drones.auto_detect_and_attack(100.0, 30.0, "enemy_1")
    # Command specific drones to perform automatic detection and attack for 20 seconds within a range of 50.0 units against "enemy_2"
     drones.auto_detect_and_attack(50.0, 20.0, "enemy_2", ["drone_a", "drone_b"])
-    ```
+       ```
 
 - **Notes**:
    - The drones will utilize the `get_system_objects` function to identify and locate enemy targets with the specified name within the detection range.
@@ -426,7 +426,7 @@ drones.GoToTarget("drone_a", "target_1")
 
 ---
 
-### 12. **`coordinate_search`**
+#### 12. **`coordinate_search`**
 
 - **Purpose**: Commands multiple drones to collaborate in searching an area, dividing the search region evenly among the drones.
 
