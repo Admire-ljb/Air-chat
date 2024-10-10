@@ -301,7 +301,7 @@ drones.GoToTarget("drone_a", "target_1")
   
   # Cancel the formation for specific drones
   drones.cancel_formation(["drone_a", "drone_b"])
- ```
+    ```
 
 - **Notes**:
    - This function will revert the specified drones back to individual control, ending any formation behaviors.
