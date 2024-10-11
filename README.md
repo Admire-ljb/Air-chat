@@ -144,6 +144,7 @@ drones.GoToTarget("drone_a", "target_1")
    objects = drones.get_system_objects("people")
    print(objects)
    ```
+  
 - **Notes**:
    - Returns a list of strings, where each string is the name of an object in the system.
    - The object_name is case-sensitive.
