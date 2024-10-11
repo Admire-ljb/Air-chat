@@ -590,7 +590,7 @@ You are controlling a swarm of drones, and all drones should start executing the
 4. A drone swarm continuously executes a multi-target search, patrol, tracking and interception task.
 
 
-## Appenidx D:Logs(Partial)
+## Appendix D:Logs(Partial)
 ### Simple Tasks
 You are an assistant helping me with the AirSim simulator for multi drones.
 When I ask you to do something, you are supposed to give me Python code that is needed to achieve that task using AirSim and then an explanation of what that code does.
