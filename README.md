@@ -454,7 +454,7 @@ drones.GoToTarget("drone_a", "target_1")
 
 
 ## Appendix B: Prompts
-### basic user prompt
+### user input
 Role：{[Initial system](#Initial-system)}
 
 Here are some functions you can use to command the drone: {[Basic action primitives](#Basic-action-primitives)}
@@ -477,7 +477,7 @@ The code output should be formatted as a python code string: "```python ... ```"
 
 
 
-### formation_updated
+### TA prompts
 Here are some functions you can use to command the drone.
 
 drones.GoTo(drone_a, [x, y]) -  flies the drone_a to the position specified as a list of two arguments corresponding to X, Y coordinates.
@@ -496,6 +496,7 @@ drones.cancel_formation(leader_name) - In the formation mission, we designate th
 drones.cancel_mission() - Cancel your last assignment
 drones.get_formation_list() - Return a list containing the information of the formation leaders.
 
+### Output Segmentation
 A few useful things:
 Instead of moveToPositionAsync() or moveToZAsync(), you should use the function fly_to() that I have defined for you.
 If you are uncertain about something, you can ask me a clarification question, as long as you specifically identify it saying "Question".
@@ -514,7 +515,7 @@ and if I don't specify explicitly which object I am referring to, you should alw
 
 you can use drones.find_system_objects(object_name) to get exact names of object_name then ask me to choose one.
 
-### collective search updated
+### KE prompts
 Here are some functions you can use to command the drone.
 
 drones.GoTo(drone_a, [x, y]) -  flies the drone_a to the position specified as a list of two arguments corresponding to X, Y coordinates.
@@ -548,6 +549,8 @@ drones.GoTo(drones.get_agents_name()[0]， [drones.get_drone_position(drones.get
 This code uses the `GoTo()` function to move the drone No.0 to a new position that is 10 forward from the current position. It does this by getting the current position of the drone using `get_drone_position()` and then creating a new list with the same Y , but with the X coordinate increased by 10. The drone will then fly forward to this new position using `GoTo()`."""
 
 You are controlling a swarm of drones, and all drones should start executing the task simultaneously.
+
+### KE feedback
 
 
 ## Appendix C: Task Set
