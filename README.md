@@ -550,7 +550,7 @@ This code uses the `GoTo()` function to move the drone No.0 to a new position th
 You are controlling a swarm of drones, and all drones should start executing the task simultaneously.
 
 
-## Appendix B: Task Set
+## Appendix C: Task Set
 ### AT1: Simple Tasks (1-5 steps per task)
 1. A drone swarm completes a single-target search task.
 2. A drone swarm completes a single-target tracking task.
@@ -590,7 +590,7 @@ You are controlling a swarm of drones, and all drones should start executing the
 4. A drone swarm continuously executes a multi-target search, patrol, tracking and interception task.
 
 
-## Appenidx C:Logs(Partial)
+## Appenidx D:Logs(Partial)
 ### Simple Tasks
 You are an assistant helping me with the AirSim simulator for multi drones.
 When I ask you to do something, you are supposed to give me Python code that is needed to achieve that task using AirSim and then an explanation of what that code does.
