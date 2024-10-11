@@ -376,7 +376,7 @@ drones.GoToTarget("drone_a", "target_1")
    - The drones will coordinate their movements to effectively cover the search area based on the specified pattern.
    - If the specified pattern type is invalid, an error message will be returned.
    - If any specified drone is not available, the command will apply only to the available drones.
-
+   - If the number of drones is sufficient (greater than 30), a spiral search is recommended.
 ---
 
 #### 10. **`attack_target`**
