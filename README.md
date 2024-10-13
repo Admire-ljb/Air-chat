@@ -41,7 +41,7 @@
 
 ---
 
-  3. **`GoTo`**
+  3.**`GoTo`**
 - **Purpose**: Commands a specific drone to fly to a specified X, Y coordinate.  
 - **Parameters**:  
    - drone_a (str): The name of the drone to command.  
@@ -57,7 +57,7 @@
 
 ---
 
- 4. `GoToTarget`  
+ 4. **`GoToTarget`**  
 - **Purpose**: Commands a specific drone to fly to a specified target's position.  
 - **Parameters**:  
    - drone_a (str): The name of the drone to command.  
