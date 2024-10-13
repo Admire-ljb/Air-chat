@@ -519,7 +519,8 @@ Please encapsulate it using the format {primitive format} and provide relevant d
    # A brief comment explaining the example
    FunctionCallExample
    ```
-5.Notes: List any important notes, such as parameter requirements, expected behavior, or error conditions.
+   
+5. Notes: List any important notes, such as parameter requirements, expected behavior, or error conditions.
 
 ## Appendix C: Task Set
 ### AT1: Simple Tasks (1-5 steps per task)
