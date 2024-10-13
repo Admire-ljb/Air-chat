@@ -465,6 +465,7 @@ Write the code to accomplish following task: {[task description](#task-descripti
 
 A few useful things: {[scenario specific configuration](#scenario-specific-configuration)}
 
+---
 
 ### Initial system
 You are an algorithm engineer for drone swarm algorithms, tasked with completing swarm missions using the predefined primitives provided below. 
@@ -477,6 +478,7 @@ You can use simple Python functions from libraries such as math and numpy.
 
 The code output should be formatted as a python code string: "```python ... ```".
 
+---
 
 ### TA1 prompts 
 Analyze the primitive library to select primitives that may be helpful for task ： {task description} .
@@ -491,8 +493,12 @@ Task Type: Identify the overall category of the task.
 Task Breakdown: Break down the task into key components or steps, including specific action primitives recommended for each part, you can shoose frome {TA1 output}.
 Task Difficulties: Highlight potential challenges or difficulties in completing the task, explaining why these might arise and what factors contribute to them.
 
+---
+
 ### Output Segmentation
 Separate the output into two parts: one part is the code, and the other part is a description of the functionality of this code.
+
+---
 
 ### KE requests
 
@@ -504,10 +510,14 @@ Please encapsulate it using the format {primitive format} and provide relevant d
 
 {Documentation example}.
 
+---
+
+
 ### KE reflection
 
 Executing the primitive above has the following error: {traceback_msg}. Please fix the bug and provide a new, improved primitive!
 
+---
 
 ### Primitives format
 
@@ -593,6 +603,7 @@ get_drone_position(drone_name): Returns the current position of the specified dr
 
 get_target_pose(target_name): Retrieves the position information of the specified target.
 
+---
 
 ### KE document format
 1. primitive Name: `primitiveName`
@@ -611,6 +622,7 @@ get_target_pose(target_name): Retrieves the position information of the specifie
    
 5. Notes: List any important notes, such as parameter requirements, expected behavior, or error conditions.
 
+---
 
 ### Human feedback reflection
 
