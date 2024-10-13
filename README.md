@@ -3,7 +3,7 @@
 ### Basic action primitives
 ---
 
-#### 1. **`hover_at_height`**
+ 1. **`hover_at_height`**
 - **Purpose**: Commands a specified drone to hover at a specified height while maintaining its current X, Y position.  
 - **Parameters**:  
    - `drone_name` (str): The name of the drone to command.  
@@ -22,7 +22,7 @@
 
 ---
 
-#### 2. **`explore_in_direction`**
+ 2. **`explore_in_direction`**
 - **Purpose**: Commands a specified drone to explore in a given direction for a set distance.  
 - **Parameters**:  
    - `drone_name` (str): The name of the drone to command.  
@@ -41,7 +41,7 @@
 
 ---
 
-####  3. **`GoTo`**
+  3. **`GoTo`**
 - **Purpose**: Commands a specific drone to fly to a specified X, Y coordinate.  
 - **Parameters**:  
    - drone_a (str): The name of the drone to command.  
@@ -57,7 +57,7 @@
 
 ---
 
-#### 4. `GoToTarget`  
+ 4. `GoToTarget`  
 - **Purpose**: Commands a specific drone to fly to a specified target's position.  
 - **Parameters**:  
    - drone_a (str): The name of the drone to command.  
@@ -73,7 +73,7 @@ drones.GoToTarget("drone_a", "target_1")
 
 ---
 
-#### 5. **`get_target_pose`**
+ 5. **`get_target_pose`**
 - **Purpose**: Retrieves the X, Y coordinates of a specified target.  
 - **Parameters**:  
    - target_name (str): The name of the target whose position is being queried.
@@ -90,7 +90,7 @@ drones.GoToTarget("drone_a", "target_1")
 
 ---
 
-#### 6. **`is_find_target`**
+ 6. **`is_find_target`**
 - **Purpose**:  Checks if a specified drone has found the target based on the image name.
 - **Parameters**:  
    - drone_a (str): The name of the drone to check.  
@@ -118,7 +118,7 @@ drones.GoToTarget("drone_a", "target_1")
 
 ---
 
-#### 7. **`get_agents_name`**
+ 7. **`get_agents_name`**
 - **Purpose**: Retrieves the names of all drones that are available for control.  
 - **Parameters**:  
    - None
@@ -134,7 +134,7 @@ drones.GoToTarget("drone_a", "target_1")
 
 ---
 
-#### 8. **`get_system_objects`**
+ 8. **`get_system_objects`**
 - **Purpose**: Retrieves a list of system objects whose names contain the specified substring.  
 - **Parameters**:  
    - object_name (str): A substring to search for in the system object names.
@@ -151,7 +151,7 @@ drones.GoToTarget("drone_a", "target_1")
    - The object_name is case-sensitive.
 ---
 
-#### 9. **`get_drone_position`**
+ 9. **`get_drone_position`**
 - **Purpose**: Retrieves the current X, Y coordinates of a specified drone.  
 - **Parameters**:  
    - drone_name (str): The name of the drone whose position is being queried.
@@ -167,7 +167,7 @@ drones.GoToTarget("drone_a", "target_1")
 
 ---
 
-#### 10. **`reset`**
+ 10. **`reset`**
 - **Purpose**: Resets all drones to their initial state.  
 - **Parameters**:  
    - None
@@ -184,7 +184,7 @@ drones.GoToTarget("drone_a", "target_1")
 
 
 
-#### 11. **`roll_back`**
+ 11. **`roll_back`**
 - **Purpose**: Reverts all drones to their previous positions.  
 - **Parameters**:  
    - None
@@ -201,7 +201,7 @@ drones.GoToTarget("drone_a", "target_1")
 ### Advanced action primitives
 ---
 
-#### 1. **`move_drones_to_positions`**
+ 1. **`move_drones_to_positions`**
 - **Purpose**: Moves specified drones to given X, Y coordinates in a batch.  
 - **Parameters**:  
    - `coordinates_list` (list[list[float, float]]): A list of [X, Y] coordinates for each drone to fly to.  
@@ -223,7 +223,7 @@ drones.GoToTarget("drone_a", "target_1")
 
 ---
 
-#### 2. **`move_drones_to_target`**
+ 2. **`move_drones_to_target`**
 - **Purpose**: Moves specified drones to the target’s position.  
 - **Parameters**:  
    - `target_name` (str): The name of the target to find and move towards.  
@@ -245,7 +245,7 @@ drones.GoToTarget("drone_a", "target_1")
 
 ---
 
-#### 3. **`circle_around_target`**
+ 3. **`circle_around_target`**
 - **Purpose**: Commands specified drones to fly in a circular formation around a specified target.  
 - **Parameters**:  
    - `target_name` (str): The name of the target to circle around.  
@@ -268,7 +268,7 @@ drones.GoToTarget("drone_a", "target_1")
    - If no drone list is provided, all available drones will be included in the formation.
 ---
  
-#### 4. **`formation_flight`**
+ 4. **`formation_flight`**
 - **Purpose**: Commands specified drones to fly in a specified formation.  
 - **Parameters**:  
    - `formation_type` (str): The type of formation (e.g., "line", "triangle", "square").  
@@ -291,7 +291,7 @@ drones.GoToTarget("drone_a", "target_1")
    - If no drone list is provided, all available drones will be included in the formation.
 
 ---
-#### 5. **`cancel_formation`**
+ 5. **`cancel_formation`**
 - **Purpose**: Cancels the current formation of specified drones, allowing them to operate independently.  
 - **Parameters**:  
    - `drone_list` (list[str], optional): A list of drone names to cancel the formation for. Defaults to all drones in formation.
@@ -313,7 +313,7 @@ drones.GoToTarget("drone_a", "target_1")
 
 ---
 
-#### 7. **`patrol_between_points`**
+ 7. **`patrol_between_points`**
 - **Purpose**: Commands specified drones to move in a loop between two or more specified points.
 - **Parameters**:  
    - `points` (list[list[float, float]]): A list of [X, Y] coordinates representing the patrol points.  
@@ -335,7 +335,7 @@ drones.GoToTarget("drone_a", "target_1")
      
 --- 
 
-#### 8. **`escort_target`**
+ 8. **`escort_target`**
 - **Purpose**: Commands specified drones to follow and protect a moving target, maintaining a certain formation around it.
 - **Parameters**:  
    - `target_name` (str): The name of the target to follow.  
@@ -358,7 +358,7 @@ drones.GoToTarget("drone_a", "target_1")
 
 ---
 
-#### 9. **`swarm_search_pattern`**
+ 9. **`swarm_search_pattern`**
 - **Purpose**: Commands specified drones to conduct a coordinated search of an area using predefined patterns (e.g., grid, spiral).
 - **Parameters**:  
    - `pattern_type` (str): The type of search pattern to use (e.g., "grid", "spiral").  
@@ -381,7 +381,7 @@ drones.GoToTarget("drone_a", "target_1")
    - If the number of drones is sufficient (greater than 30), a spiral search is recommended.
 ---
 
-#### 10. **`attack_target`**
+ 10. **`attack_target`**
 - **Purpose**: Commands specified drones to move towards and engage with a designated target for attack.
 - **Parameters**:  
    - `target_name` (str): The name of the target to engage with.  
@@ -403,7 +403,7 @@ drones.GoToTarget("drone_a", "target_1")
 
 ---
 
-#### 11. **`auto_detect_and_attack`**
+ 11. **`auto_detect_and_attack`**
 - **Purpose**: Automatically detects enemy targets within a specified range and commands specified drones to engage with them.
 - **Parameters**:  
    - `detection_range` (float): The range within which drones will search for enemy targets.  
@@ -428,7 +428,7 @@ drones.GoToTarget("drone_a", "target_1")
 
 ---
 
-#### 12. **`coordinate_search`**
+ 12. **`coordinate_search`**
 
 - **Purpose**: Commands multiple drones to collaborate in searching an area, dividing the search region evenly among the drones.
 
