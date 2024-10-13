@@ -13,7 +13,8 @@
   ```python
   # Make drone_a hover at a height of 10.0 units
   drones.hover_at_height("drone_a", 10.0)
-  ```
+  ```![Uploading image.png…]()
+
 - **Notes**:
   - The height must be a positive float value.
   - If the specified drone is not available, an error message will be returned.
@@ -629,6 +630,7 @@ Some helpful tips for analyzing the feedback:
        
        If the logical success rates are high with low execution success rates, then you might consider recommending users to encapsulate some high-level primitives.
 
+---
 
 ## Appendix C: Task Set
 ### AT1: Simple Tasks (1-5 steps per task)
