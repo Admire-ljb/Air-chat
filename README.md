@@ -638,6 +638,202 @@ drones.GoToTarget("drone_a", "target_1")
 
 ---
 
+20. **emergency_recall**
+
+  - **Purpose**: Sends a recall signal to all drones, instructing them to return to the designated home point immediately.
+
+  - **Parameters**:
+    - home_point (tuple[float, float]): The (x, y) coordinates of the home point to which drones should return.
+    - drone_count (int): The number of drones to recall.
+
+  - **Example Usage**:
+
+    
+python
+    # Define home point for recall
+    home_point = (0, 0)
+    
+    # Create a Drones object and initiate emergency recall
+    drones_controller = Drones()
+    drones_controller.emergency_recall(home_point=home_point, drone_count=12)
+
+
+  - **Notes**:
+    - The method triggers a swift return to the home point for all specified drones, ensuring safety during emergencies.
+    - It can be useful in situations where drones may be in danger or when mission parameters change abruptly.
+
+
+---
+
+21. **`track_moving_target`**
+
+  - **Purpose**: Assigns drones to continuously track a moving target and report its location in real-time.
+
+  - **Parameters**:
+    - `target_position` (tuple[float, float]): The initial (x, y) coordinates of the moving target.
+    - `target_velocity` (tuple[float, float]): The (vx, vy) components of the target's velocity.
+    - `drone_count` (int): The number of drones assigned to track the target.
+
+  - **Example Usage**:
+
+    ```python
+    # Define target position and velocity
+    target_position = (10, 10)
+    target_velocity = (2, 1)
+    
+    # Create a Drones object and initiate target tracking
+    drones_controller = Drones()
+    drones_controller.track_moving_target(target_position=target_position, target_velocity=target_velocity, drone_count=5)
+    ```
+
+  - **Notes**:
+    - This method enables drones to dynamically adjust their positions to maintain visual contact with the target.
+    - It is useful for surveillance or monitoring operations where the target's movement is unpredictable.
+
+---
+
+22. **`execute_surveillance_pattern`**
+
+  - **Purpose**: Directs drones to execute a specific surveillance pattern over a designated area.
+
+  - **Parameters**:
+    - `surveillance_area` (list[tuple[float, float]]): A list of (x, y) coordinates defining the surveillance area.
+    - `pattern_type` (str): The type of surveillance pattern (e.g., "grid", "zigzag").
+    - `drone_count` (int): The number of drones to perform the surveillance.
+
+  - **Example Usage**:
+
+    ```python
+    # Define surveillance area
+    surveillance_area = [(0, 0), (0, 10), (10, 10), (10, 0)]
+    
+    # Create a Drones object and execute surveillance pattern
+    drones_controller = Drones()
+    drones_controller.execute_surveillance_pattern(surveillance_area=surveillance_area, pattern_type="grid", drone_count=6)
+    ```
+
+  - **Notes**:
+    - This method allows for comprehensive coverage of an area, ensuring that all points are monitored effectively.
+    - It can be adapted for different patterns based on mission goals.
+
+---
+
+23. **`conduct_mission_debrief`**
+
+  - **Purpose**: Gathers and compiles data from drones after a mission for analysis and reporting.
+
+  - **Parameters**:
+    - `mission_id` (str): The identifier for the mission being debriefed.
+    - `drone_ids` (list[int]): A list of drone IDs involved in the mission.
+
+  - **Example Usage**:
+
+    ```python
+    # Define mission ID and drone IDs
+    mission_id = "mission_123"
+    drone_ids = [1, 2, 3, 4]
+    
+    # Create a Drones object and conduct mission debrief
+    drones_controller = Drones()
+    debrief_data = drones_controller.conduct_mission_debrief(mission_id=mission_id, drone_ids=drone_ids)
+    ```
+
+  - **Notes**:
+    - This method collects operational data, ESR from drones to evaluate mission success and areas for improvement.
+    - It supports better planning and execution of future missions by analyzing performance metrics.
+
+---
+
+24. **`coordinate_squad_movements`**
+
+  - **Purpose**: Coordinates the movements of a squad of drones to execute a mission seamlessly.
+
+  - **Parameters**:
+    - `squad_id` (int): The ID of the squad being coordinated.
+    - `destination` (tuple[float, float]): The target location where the squad needs to move.
+    - `formation` (str, optional): The formation in which the squad should travel (e.g., line, wedge).
+
+  - **Example Usage**:
+
+    ```python
+    # Define destination and formation
+    destination = (10, 10)
+    
+    # Create a Drones object and coordinate squad movements
+    drones_controller = Drones()
+    drones_controller.coordinate_squad_movements(squad_id=1, destination=destination, formation="line")
+    ```
+
+  - **Notes**:
+    - Effective coordination minimizes the risk of collisions and enhances operational success.
+
+---
+
+### 25. **`assemble_group`**
+
+- **Purpose**: Directs all members of a group to converge at a specific target location, ensuring they arrive as a coordinated unit.
+
+- **Parameters**:
+  - `group_members` (list[Drones]): A list of drone objects representing the group members.
+  - `target_position` (tuple[float, float]): The (x, y) coordinates where the group should assemble.
+  - `speed` (float, optional): The speed at which the group members should move. If not provided, default drone speed is used.
+  - `formation` (str, optional): The formation to use upon arrival at the target (e.g., "line", "circle"). If not provided, no specific formation is enforced.
+
+- **Example Usage**:
+
+  ```python
+  # Define group members and target position
+  group_members = [drone1, drone2, drone3]
+  target_position = (50.0, 75.0)
+  
+  # Create a Drones controller object
+  drones_controller = Drones()
+  
+  # Assemble the group at the target position
+  drones_controller.assemble_group(group_members=group_members, target_position=target_position)
+  
+  # Assemble with a specific speed and formation
+  drones_controller.assemble_group(group_members=group_members, target_position=target_position, speed=10.0, formation="circle")
+
+---
+
+### 26. **`circular_escort`**
+
+- **Purpose**: Commands all members of a group to surround and escort a moving target in a circular formation, maintaining a protective distance while orbiting the target.
+
+- **Parameters**:
+  - `group_members` (list[Drones]): A list of drone objects representing the group members.
+  - `target` (Drones or tuple[float, float]): The moving target (either a drone or a point) to be escorted.
+  - `radius` (float): The distance each group member should maintain from the target while escorting.
+  - `speed` (float, optional): The speed at which the group should move to keep up with the target. If not provided, drones will match the target's speed.
+  - `orbit_height` (float, optional): The altitude difference for group members relative to the target to create a protective layer from different angles.
+  - `rotation_speed` (float, optional): The speed at which the group members orbit the target to dynamically maintain their position while in motion. Defaults to a static orbit if not provided.
+
+- **Example Usage**:
+
+  ```python
+  # Define group members and target drone
+  group_members = [drone1, drone2, drone3]
+  target_drone = drone_target
+  
+  # Create a Drones controller object
+  drones_controller = Drones()
+  
+  # Command the group to escort the target in a circular formation at a 10m radius
+  drones_controller.circular_escort(group_members=group_members, target=target_drone, radius=10.0)
+  
+  # Command the group to escort the target with a specific speed and dynamic orbit
+  drones_controller.circular_escort(group_members=group_members, target=target_drone, radius=10.0, speed=5.0, rotation_speed=2.0, orbit_height=5.0)
+  ```
+  
+ - **Notes**:
+   - The drones will form a circle around the target, adjusting their positions as the target moves to keep it within the center of the formation.
+   - The `rotation_speed` allows the drones to orbit around the target dynamically, creating continuous motion and better coverage from all angles.
+   - The `orbit_height` parameter adds vertical layering to the formation, offering better protection and defense from threats at different altitudes.
+   - This method is ideal for missions requiring close protection of mobile assets or VIPs, as drones will maintain a consistent defensive perimeter while in motion.
+     
+---
+
 ## Appendix B: Prompts
 ### user input
 Role：{[Initial system](#Initial-system)}
