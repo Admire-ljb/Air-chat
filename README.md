@@ -686,11 +686,11 @@ Some helpful tips for analyzing the feedback:
 
 ## Appendix D: Chat history Logs
 ### Task Activation(TA)
-**User:**: Fly all drones to find the hostage, there are more than one hostage.
+**User:** Fly all drones to find the hostage, there are more than one hostage.
 
 ---
 
-**TALKER:**: You are an algorithm engineer for drone swarm algorithms, tasked with completing swarm missions using the predefined primitives provided below. 
+**TALKER:** You are an algorithm engineer for drone swarm algorithms, tasked with completing swarm missions using the predefined primitives provided below. 
 
 When I make a request, you need to provide the corresponding Python code to accomplish that task and explain what the code does.
 
@@ -718,7 +718,6 @@ swarm_search_pattern: To conduct a coordinated search using patterns like grid o
 
 coordinate_search: For dividing the search area among multiple drones.
 
----
 A few useful things：
 
 Task Type: Cooperative searching
@@ -740,6 +739,57 @@ Dispersion Strategy: Effectively determining initial positions and ensuring that
 Communication Issues: Ensuring that all drones can share information about found hostages without overlap or confusion.
 
 ---
+**User:** Coordinate 12 drones to search for the target Alice. The drones must divide the area, efficiently cover it, avoid redundant searches, and promptly report Alice's location. After locating Alice, reset the scene and ensure the task is completed within 10 minutes for all 10 rounds.
+
+---
+
+**TALKER:**
+You are an algorithm engineer for drone swarm algorithms, tasked with completing swarm missions using the predefined primitives provided below.
+
+When I make a request, you need to provide the corresponding Python code to accomplish that task and explain what the code does.
+
+You are not to use any other hypothetical functions that you think might exist.
+
+You can use simple Python functions from libraries such as math and numpy.
+
+The code output should be formatted as a python code string: "python ...".
+
+Write the code to accomplish the following task: Coordinate 12 drones to search for the target Alice. The drones must divide the area, efficiently cover it, avoid redundant searches, and promptly report Alice's location. After locating Alice, reset the scene and ensure the task is completed within 10 minutes for all 10 rounds.
+
+Here are some primitives you can use:
+
+get_agents_name: To retrieve the names of all available drones.
+
+is_find_target: Checks if a specified drone has found the target.
+
+get_target_pose: To get the position of identified targets like Alice.
+
+coordinate_search: For dividing the search area among multiple drones.
+
+swarm_search_pattern: To conduct a coordinated search using patterns like grid or spiral.
+
+Task Type:
+
+Cooperative searching involving area division, systematic search, and communication among drones.
+
+Task Breakdown:
+
+Area Division: Use coordinate_search to divide the search area efficiently among 12 drones. This avoids redundant searches and ensures full coverage.
+
+Search Strategy: Use swarm_search_pattern to deploy a coordinated search using either grid or spiral patterns. Each drone should follow its assigned area and pattern.
+
+Target Monitoring: Use is_find_target in a loop to continuously monitor whether a drone finds Alice.
+
+Position Reporting: Once Alice is found, retrieve her position using get_target_pose.
+
+Scene Reset: Reset the scene after locating Alice to start the next round.
+
+Task Difficulties:
+Area Coverage: Ensuring the search area is efficiently divided and drones cover it without overlaps.
+
+Detection Loop: Efficiently monitoring drones for Alice detection to avoid latency.
+
+Communication: Ensuring all drones report back without confusion when Alice is found.
 
 ### Knowledge Expansion(KE)
 ### Demonstration video dialogue recording
