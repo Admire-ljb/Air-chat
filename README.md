@@ -612,13 +612,21 @@ get_target_pose(target_name): Retrieves the position information of the specifie
 
 
 ### Human feedback reflection
+
 Please carefully analyze the user feedback and provide a new, improved code implementation that can better solve the task.
+
 Here is the user feedback：{usr comments}
+
 Here is the system feedback：{system comments}
+
 Some helpful tips for analyzing the feedback:
+
     Prioritize user feedback, and then refer to system feedback.
+    
     for system feedback：
+    
        If the logical success rates are always low, then you must reinterpret the task and use a structured approach to rephrase the prompt.
+       
        If the logical success rates are high with low execution success rates, then you might consider recommending users to encapsulate some high-level primitives.
 
 
