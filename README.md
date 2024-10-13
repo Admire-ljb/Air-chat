@@ -554,6 +554,89 @@ drones.GoToTarget("drone_a", "target_1")
     - If no `drone_list` is provided, all drones in the swarm will engage in tracking.
 
 ---
+18. **`group_drones`**
+
+  - **Purpose**: Group drones into subgroups based on their targets to each other, returning a list of grouped drones for coordinated tasks.
+
+  - **Parameters**:
+    - `distance_threshold` (float): The maximum distance for drones to be considered part of the same group.
+    - `max_group_size` (int, optional): The maximum number of drones allowed in each subgroup. If not provided, there is no limit on group size.
+
+  - **Example Usage**:
+
+    ```python
+    # Create a Drones object 
+    drones = Drones()
+    clustered_groups = drones.cluster_drones(distance_threshold=200.0)
+    
+    # Limit group size to 3 drones per group
+    limited_clustered_groups = drones.group_drones( distance_threshold=200.0, max_group_size=3)
+    ```
+
+  - **Notes**:
+    - The method uses a simple distance-based clustering algorithm to group drones. 
+    - Drones within the specified `distance_threshold` will be grouped together.
+    - If `max_group_size` is provided, groups exceeding this size will be split into separate groups as needed.
+    - This method is useful for organizing drones for tasks like coordinated searching or patrolling.
+
+
+18. **`group_by_targets`**
+
+  - **Purpose**: Groups drones into teams based on their targets to multiple targets, assigning the closest drones to each target for efficient task execution.
+
+  - **Parameters**:
+    - `target_positions` (list[tuple[float, float]]): A list of (x, y) coordinates representing the positions of the targets.
+    - `max_team_size` (int, optional): The maximum number of drones that can be assigned to each target. If not provided, all drones will be grouped to the nearest targets without limit.
+
+  - **Example Usage**:
+
+    ```python
+    # Define target positions
+    target_positions = [(1, 1), (10, 10)]
+    
+    # Create a Drones object and group drones by targets to targets
+    drones = Drones()
+    grouping = drones.group_by_targets(target_positions=target_positions)
+    
+    # Limit team size to 2 drones per target
+    limited_grouping = drones.group_by_targets(target_positions=target_positions, max_team_size=2)
+    ```
+
+  - **Notes**:
+    - This method uses Euclidean distance to calculate targets and groups drones to the closest target.
+    - If `max_team_size` is set, it ensures no more than the specified number of drones are assigned to a target.
+    - The method should be used when drones and targets' positions are updated in real time to dynamically reassign teams.
+
+---
+19. **`combat_patrol`**
+
+  - **Purpose**: Directs a formation of drones to conduct a patrol in a specified area, ensuring coverage and effective surveillance during combat situations.
+
+  - **Parameters**:
+    - `patrol_area` (list[tuple[float, float]]): A list of (x, y) coordinates defining the vertices of the patrol area (polygon).
+    - `drone_count` (int): The number of drones assigned to the patrol.
+    - `patrol_speed` (float): The speed at which the drones will patrol the area (units per second).
+    - `formation_pattern` (str): The formation pattern for the drones during patrol (e.g., "line", "grid", "circle").
+    - `time_limit` (float, optional): The duration for which the patrol should be conducted, in seconds. If not provided, the patrol continues indefinitely.
+
+  - **Example Usage**:
+
+    ```python
+    # Define patrol area as a polygon
+    patrol_area = [(0, 0), (0, 10), (10, 10), (10, 0)]
+    
+    # Create a Drones object and initiate a combat patrol
+    drones_controller = Drones()
+    drones_controller.combat_patrol(patrol_area=patrol_area, drone_count=6, patrol_speed=5.0, formation_pattern="grid", time_limit=600)
+    ```
+
+  - **Notes**:
+    - The method ensures that drones maintain the specified formation while covering the defined patrol area.
+    - Drones will adjust their positions to stay within the patrol boundaries and maintain formation at the specified speed.
+    - The `time_limit` parameter allows for timed patrols, making it useful for missions requiring specific operational durations.
+    - This method is ideal for surveillance tasks during combat operations, providing real-time data and alerts on detected threats within the patrol area.
+
+---
 
 ## Appendix B: Prompts
 ### user input
