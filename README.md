@@ -505,6 +505,21 @@ Please encapsulate it using the format {primitive format} and provide relevant d
 
 ### KE feedback
 
+### KE document format
+1. primitive Name: `primitiveName`
+   
+2. Purpose: A brief description of the  primitive's main task and purpose.
+
+3. Parameters:
+   - `ParameterName` (DataType): Description of the parameter and its role.
+   - `ParameterName` (DataType): Description of the parameter and its role. (List all parameters as needed)
+
+4. Example Usage:
+   ```python
+   # A brief comment explaining the example
+   FunctionCallExample
+   ```
+5.Notes: List any important notes, such as parameter requirements, expected behavior, or error conditions.
 
 ## Appendix C: Task Set
 ### AT1: Simple Tasks (1-5 steps per task)
