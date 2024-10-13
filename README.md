@@ -1027,10 +1027,9 @@ class Drones:
 
 ---
 
-### Demonstration video dialogue recording
+<!--### Demonstration video dialogue recording -->
 
 
----
 ### Interactive conversation(Partial)
 #### Simple Tasks
 You are an assistant helping me with the AirSim simulator for multi drones.
