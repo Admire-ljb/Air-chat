@@ -1349,7 +1349,7 @@ and provide relevant documentation, as shown in the example.
 Here’s the encapsulated code for the Drones class based on the provided specifications, along with relevant documentation.
 ```python
 class Drones:
-      def __init__(self):
+    def __init__(self):
         # Initialize class variables here
         self.drones = self.get_agents_name()  # Get all available drones
 
