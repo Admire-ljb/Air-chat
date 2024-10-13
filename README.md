@@ -968,178 +968,37 @@ and provide relevant documentation, as shown in the example.
 Here’s the encapsulated code for the Drones class based on the provided specifications, along with relevant documentation.
 ```python
 class Drones:
-    """
-    A class to coordinate a drone swarm for patrolling a designated area
-    and intercepting any detected suspicious targets.
-    """
+      def __init__(self):
+        # Initialize class variables here
+        self.drones = self.get_agents_name()  # Get all available drones
 
-    def __init__(self):
-        # Initialize member variables
-        self.actor = None  # The actor model used for handling the policy.
-        self.env = None  # The drone simulation environment object, of type `AirSimDroneEnv`.
-        self.client = None  # The client that connects to the AirSim simulator.
-        self.height = 100  # The default flight altitude of the drones (in meters).
-        self.destroy_distance = 50  # The distance threshold used to determine when an enemy is destroyed.
-        self.remained_vehicle = []  # A list of drones that have not been destroyed yet.
-        self.num_agents = 12  # The number of drones in the system.
-        self.mission_state = [0] * self.num_agents  # State of each mission.
-        self.mission_protect_teams = [[] for _ in range(self.num_agents)]  # Teams of drones for protection missions.
-        self.people_dic = {}  # Mapping hostages to their corresponding identifiers.
-        self.attack_flag = {}  # Current target that each drone is attacking.
-        self.attacked_enemy = []  # Record of enemies that have been attacked.
-        self.attacked_circle = []  # Circular regions where drones are engaged in attacks.
-        self.enemy_position = {}  # Information about the position of enemies.
-        self.mission_points = []  # Mission point locations.
-        self.mission_attack = []  # Attack status for each mission.
-        self.people_cf_dic = {}  # Groups of drones involved in rescuing hostages.
-        self.position_dict = {}  # Current position of each drone.
-        self.people_flag = {}  # Rescue status of specific hostages.
-        self.intercept_flag = [False] * self.num_agents  # State of enemy interception by drones.
-        self.done_n = False  # Indicates if the current mission has been completed by the drones.
-        self.destroyed_enemy = []  # Enemies that have been destroyed.
-        self.agents = []  # List of drone objects.
-        self.sorted_bp_dict = {}  # Sorted blueprints (drones).
-        self.bp_names_list = []  # Drone blueprint names.
-        self.history_traj = []  # Historical flight trajectories of the drones.
-        self.task_cancel = False  # Indicates whether the current mission has been canceled.
-
-    def reset(self):
-        """
-        Resets the environment and the position of the drones.
-        """
-        # Logic to reset environment and drone positions
-        pass
-
-    def fly_run(self):
-        """
-        Starts a new thread for the drone flight operation.
-        """
-        # Logic to initiate flight operations
-        pass
-
-    def fly_to_target(self):
-        """
-        Controls the drones, guiding them to their target locations.
-        """
-        # Logic to control drones towards target
-        pass
-
-    def cancel_task(self, bp_name):
-        """
-        Cancels the task of the specified drone.
+    def patrol_and_intercept(self, drone_list=None):
+        """Coordinates a drone swarm to patrol a designated area and intercept any detected suspicious targets."""
         
-        Parameters:
-        - bp_name (str): The blueprint name of the drone whose task is to be canceled.
-        """
-        # Logic to cancel drone's task
-        pass
+        # Use the specified drone_list or default to all available drones
+        if drone_list is None:
+            drone_list = self.drones
+        
+        # Step 2: Patrol the area using grid pattern to cover [0,0] to [200,200]
+        swarm_search_pattern('grid')
 
-    def GoTo(self, bp_name, position):
-        """
-        Sends the specified drone to the target position.
-        
-        Parameters:
-        - bp_name (str): The blueprint name of the drone to move.
-        - position (tuple): The target coordinates (x, y, z) to move the drone to.
-        """
-        # Logic to move drone to the specified position
-        pass
+        # Step 3: Initialize a variable to identify if a suspicious target is found
+        suspicious_target_detected = False
+        target_position = None
 
-    def Follow(self, bp_name, target_name):
-        """
-        Commands the specified drone to follow a target.
-        
-        Parameters:
-        - bp_name (str): The blueprint name of the drone to command.
-        - target_name (str): The name of the target for the drone to follow.
-        """
-        # Logic for the drone to follow the specified target
-        pass
-
-    def find_target(self, bp_name, target_name):
-        """
-        Checks if the target has been found by the specified drone.
-        
-        Parameters:
-        - bp_name (str): The blueprint name of the drone to check.
-        - target_name (str): The name of the target to find.
-        
-        Returns:
-        - bool: True if the target is found, otherwise False.
-        """
-        # Logic to check if the target has been found
-        pass
-
-    def get_agents_name(self):
-        """
-        Retrieves the list of drone names.
-        
-        Returns:
-        - list: A list of names of available drones.
-        """
-        # Logic to retrieve drone names
-        pass
-
-    def find_system_objects(self, object_name):
-        """
-        Searches for system objects in the scene.
-        
-        Parameters:
-        - object_name (str): The name of the object to search for.
-        
-        Returns:
-        - object: The found object or None if not found.
-        """
-        # Logic to find system objects
-        pass
-
-    def get_drone_position(self, drone_name):
-        """
-        Returns the current position of the specified drone.
-        
-        Parameters:
-        - drone_name (str): The name of the drone whose position is to be retrieved.
-        
-        Returns:
-        - tuple: The current position (x, y, z) of the drone.
-        """
-        # Logic to get drone's position
-        pass
-
-    def get_target_pose(self, target_name):
-        """
-        Retrieves the position information of the specified target.
-        
-        Parameters:
-        - target_name (str): The name of the target for which the position is needed.
-        
-        Returns:
-        - tuple: The position (x, y, z) of the target.
-        """
-        # Logic to get the target's position
-        pass
-
-    def patrol_and_intercept(self):
-        """
-        Coordinates the drone swarm to patrol a designated area and intercept suspicious targets.
-        """
-        drones = self.get_agents_name()  # Get the names of all available drones
-        self.swarm_search_pattern('grid')  # Patrol the area using grid pattern
-
-        suspicious_target_detected = False  # Initialize the detection flag
-        target_position = None  # Variable to store target position
-
-        # Continuous patrol and detection loop
+        # Step 4: Continuous patrol and detection loop for suspicious targets
         while not suspicious_target_detected:
-            for drone in drones:
-                if self.find_target(drone, "suspicious"):  # Check if the drone has found a target
-                    target_position = self.get_target_pose(drone)  # Get the target position
-                    suspicious_target_detected = True  # Mark as detected
-                    break  # Exit loop after finding a target
+            for drone in drone_list:
+                # Check if the specified drone has found a suspicious target
+                if self.find_target(drone, 'suspicious_target'):  # Specify the target type
+                    # Get the position of the identified suspicious target
+                    target_position = self.get_target_pose(drone)
+                    suspicious_target_detected = True  # Mark as a suspicious target detected
+                    break  # Exit the loop after finding a target
 
-        # Direct drones to the target position for interception
+        # Step 5: Direct drones to the position of the suspicious target for interception
         if target_position is not None:
-            self.GoTo(drones, target_position)
+            self.move_drones_to_target(target_position)
 ```
 
 - Documentation
@@ -1148,19 +1007,23 @@ class Drones:
 
   - **Purpose**: Coordinates a drone swarm to patrol a designated area and intercept any detected suspicious targets.
 
-  - **Parameters**: None
+  - **Parameters**: 
+    - `drone_list` (list, optional): A list of specific drones to be used for patrolling. If not provided, the method will default to using all available drones.
+
 
   - Example Usage:
 
  ```python
  # Creating a Drones object and executing the patrol and intercept procedure
  drones_controller = Drones()
+ drones_controller.patrol_and_intercept(drone_list=['drone1', 'drone2'])
+ # Executing the patrol and intercept procedure with all available drones
  drones_controller.patrol_and_intercept()
  ```
+
   - Notes:
-   - The method continuously patrols until a suspicious target is detected.
-   - All drones in the swarm are used for patrolling and detection.
-   - Ensure that the drone names are correctly retrieved before initiating the patrol.
+    - All drones in the swarm are used for patrolling and detection if no specific drone_list is provided.
+    - Ensure that the drone names are correctly retrieved before initiating the patrol.
 
 
 ### Demonstration video dialogue recording
