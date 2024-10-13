@@ -690,7 +690,9 @@ Some helpful tips for analyzing the feedback:
 
 ---
 
-**TALKER:** You are an algorithm engineer for drone swarm algorithms, tasked with completing swarm missions using the predefined primitives provided below. 
+**TALKER:**
+
+You are an algorithm engineer for drone swarm algorithms, tasked with completing swarm missions using the predefined primitives provided below. 
 
 When I make a request, you need to provide the corresponding Python code to accomplish that task and explain what the code does.
 
@@ -744,6 +746,7 @@ Communication Issues: Ensuring that all drones can share information about found
 ---
 
 **TALKER:**
+
 You are an algorithm engineer for drone swarm algorithms, tasked with completing swarm missions using the predefined primitives provided below.
 
 When I make a request, you need to provide the corresponding Python code to accomplish that task and explain what the code does.
@@ -851,6 +854,146 @@ Rapid Response: Drones need to quickly respond to detected suspicious targets fo
 ---
 
 ### Knowledge Expansion(KE)
+
+**Input:**
+
+You are a developer assisting in code encapsulation.
+
+The code is 
+```python
+# Step 1: Get the names of all available drones
+drones = get_agents_name()
+
+# Step 2: Patrol the area using grid pattern to cover [0,0] to [200,200]
+swarm_search_pattern('grid')
+
+# Step 3: Initialize a variable to identify if a suspicious target is found
+suspicious_target_detected = False
+target_position = None
+
+# Step 4: Continuous patrol and detection loop for suspicious targets
+while not suspicious_target_detected:
+    for drone in drones:
+        # Check if the specified drone has found a suspicious target
+        if is_find_target(drone):
+            # Get the position of the identified suspicious target
+            target_position = get_target_pose(drone)
+            suspicious_target_detected = True  # Mark as a suspicious target detected
+            break  # Exit the loop after finding a target
+
+# Step 5: Direct drones to the position of the suspicious target for interception
+if target_position is not None:
+    move_drones_to_target(target_position)
+```
+
+with the description 
+
+"The code coordinates a drone swarm to patrol a designated area and intercept any detected suspicious targets."
+
+
+Please encapsulate it using the format 
+
+Class name: Drones
+
+Class Member Variables:
+
+actor: The actor model used for handling the policy.
+
+env: The drone simulation environment object, of type AirSimDroneEnv.
+
+client: The client that connects to the AirSim simulator.
+
+height: The default flight altitude of the drones (in meters).
+
+destroy_distance: The distance threshold used to determine when an enemy is destroyed.
+
+remained_vehicle: A list of drones that have not been destroyed yet.
+
+num_agents: The number of drones in the system.
+
+mission_state: An array representing the state of each mission, initialized as an array of zeros.
+
+mission_protect_teams: A list representing the teams of drones for protection missions, where each index corresponds to a different mission's team.
+
+people_dic: A dictionary mapping hostages to their corresponding identifiers.
+
+attack_flag: A dictionary indicating the current target that each drone is attacking.
+
+attacked_enemy: A record of enemies that have been attacked.
+
+attacked_circle: Records the circular regions where drones are engaged in attacks.
+
+enemy_position: Information about the position of enemies.
+
+mission_points: Data on mission point locations.
+
+mission_attack: The attack status for each mission.
+
+people_cf_dic: A dictionary recording the groups of drones involved in rescuing hostages.
+
+position_dict: A dictionary storing the current position of each drone.
+
+people_flag: Flags indicating the rescue status of specific hostages.
+
+intercept_flag: An array tracking the state of enemy interception by drones.
+
+done_n: A flag that indicates whether the current mission has been completed by the drones.
+
+destroyed_enemy: A list recording enemies that have been destroyed.
+
+agents: A list of drone objects.
+
+sorted_bp_dict: A dictionary of sorted blueprints (drones).
+
+bp_names_list: A list of drone blueprint names.
+
+history_traj: A record of the drones' historical flight trajectories.
+
+task_cancel: A flag indicating whether the current mission has been canceled.
+
+Class Methods:
+
+reset(): Resets the environment and the position of the drones.
+
+fly_run(): Starts a new thread for the drone flight operation.
+
+fly_to_target(): Controls the drones, guiding them to their target locations.
+
+cancel_task(bp_name): Cancels the task of the specified drone.
+
+GoTo(bp_name, position): Sends the specified drone to the target position.
+
+Follow(bp_name, target_name): Commands the specified drone to follow a target.
+
+find_target(bp_name, target_name): Checks if the target has been found by the specified drone.
+
+get_agents_name(): Retrieves the list of drone names.
+
+find_system_objects(object_name): Searches for system objects in the scene.
+
+get_drone_position(drone_name): Returns the current position of the specified drone.
+
+get_target_pose(target_name): Retrieves the position information of the specified target.
+
+
+and provide relevant documentation, as shown in the example.
+
+primitive Name: primitiveName
+
+Purpose: A brief description of the primitive's main task and purpose.
+
+Parameters:
+
+ParameterName (DataType): Description of the parameter and its role.
+ParameterName (DataType): Description of the parameter and its role. (List all parameters as needed)
+Example Usage:
+
+# A brief comment explaining the example
+FunctionCallExample
+Notes: List any important notes, such as parameter requirements, expected behavior, or error conditions.
+
+
+
 ### Demonstration video dialogue recording
 ### Interactive conversation(Partial)
 #### Simple Tasks
