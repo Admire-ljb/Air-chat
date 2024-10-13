@@ -455,6 +455,30 @@ drones.GoToTarget("drone_a", "target_1")
 
 
 
+  13. **`patrol_and_intercept`**
+
+  - **Purpose**: Coordinates a drone swarm to patrol a designated area and intercept any detected suspicious targets.
+
+  - **Parameters**: 
+    - `drone_list` (list[str], optional): A list of specific drones to be used for patrolling. If not provided, the method will default to using all available drones.
+
+
+  - **Example Usage**:
+
+ ```python
+ # Creating a Drones object and executing the patrol and intercept procedure
+ drones_controller = Drones()
+ drones_controller.patrol_and_intercept(drone_list=['drone1', 'drone2'])
+ # Executing the patrol and intercept procedure with all available drones
+ drones_controller.patrol_and_intercept()
+ ```
+
+ - **Notes**:
+    - All drones in the swarm are used for patrolling and detection if no specific drone_list is provided.
+    - Ensure that the drone names are correctly retrieved before initiating the patrol.
+
+---
+
 ## Appendix B: Prompts
 ### user input
 Role：{[Initial system](#Initial-system)}
