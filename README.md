@@ -684,8 +684,12 @@ Some helpful tips for analyzing the feedback:
 4. A drone swarm continuously executes a multi-target search, patrol, tracking and interception task.
 
 
-## Appendix D:Logs(Partial)
-### Simple Tasks
+## Appendix D: Chat history Logs
+### Task Activation(TA)
+### Knowledge Expansion(KE)
+### Demonstration video dialogue recording
+### Interactive conversation(Partial)
+#### Simple Tasks
 You are an assistant helping me with the AirSim simulator for multi drones.
 When I ask you to do something, you are supposed to give me Python code that is needed to achieve that task using AirSim and then an explanation of what that code does.
 You are only allowed to use the functions I have defined for you.
@@ -917,7 +921,7 @@ Sure! If you have any more questions in the future, feel free to ask. Have a gre
 
 ---
 
-### Moderate Tasks
+#### Moderate Tasks
 
 You are an assistant helping me with the AirSim simulator for multi drones.
 When I ask you to do something, you are supposed to give me Python code that is needed to achieve that task using AirSim and then an explanation of what that code does.
@@ -1148,7 +1152,7 @@ Please note that you may need to adjust the code based on the specific implement
 Sure! If you have any more questions in the future, feel free to ask. Have a great day! Goodbye!
 
 ---
-### Complex Tasks
+#### Complex Tasks
 You are an assistant helping me with the AirSim simulator for multi drones.
 When I ask you to do something, you are supposed to give me Python code that is needed to achieve that task using AirSim and then an explanation of what that code does.
 You are only allowed to use the functions I have defined for you.
@@ -1265,7 +1269,7 @@ Please adjust the logic as needed based on your specific scenario and requiremen
 Sure! If you have any more questions in the future, feel free to ask. Have a great day! Goodbye!
 
 ---
-### Advanced Task
+#### Advanced Task
 
 You are an assistant helping me with the AirSim simulator for multi drones.
 When I ask you to do something, you are supposed to give me Python code that is needed to achieve that task using AirSim and then an explanation of what that code does.
@@ -1584,7 +1588,7 @@ Please feel free to adjust the logic further based on your specific requirements
 Sure! If you have any more questions in the future, feel free to ask. Have a great day! Goodbye!
 
 ---
-### Expert Task
+#### Expert Task
 
 You are an assistant helping me with the AirSim simulator for multi drones.
 When I ask you to do something, you are supposed to give me Python code that is needed to achieve that task using AirSim and then an explanation of what that code does.
@@ -1781,7 +1785,7 @@ Sure! If you have any more questions in the future, feel free to ask. Have a gre
 ---
 
 
-### Master Task
+#### Master Task
 
 You are an assistant helping me with the AirSim simulator for multi drones.
 When I ask you to do something, you are supposed to give me Python code that is needed to achieve that task using AirSim and then an explanation of what that code does.
