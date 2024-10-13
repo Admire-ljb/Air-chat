@@ -479,6 +479,82 @@ drones.GoToTarget("drone_a", "target_1")
 
 ---
 
+14. **`patrol_pattern`**
+
+  - **Purpose**: Commands a drone swarm to patrol a designated area in a specific pattern, such as circular or zigzag, ensuring the area is thoroughly covered.
+
+  - **Parameters**:
+    - `pattern_type` (str): The type of patrol pattern to be executed (e.g., "circular", "zigzag").
+    - `area` (list[float, float]): Coordinates representing the patrol area boundary.
+    - `drone_list` (list[str], optional): A list of drones to be used for the patrol. If not provided, the method will default to using all available drones.
+
+  - **Example Usage**:
+
+    ```python
+    # Creating a Drones object and initiating a circular patrol with specific drones
+    drones_controller = Drones()
+    drones_controller.patrol_pattern(pattern_type="circular", area=[[0.0, 0.0], [10.0, 10.0]], drone_list=['drone1', 'drone2'])
+
+    # Using all available drones for a zigzag patrol
+    drones_controller.patrol_pattern(pattern_type="zigzag", area=[[0.0, 0.0], [10.0, 10.0]])
+    ```
+
+  - **Notes**:
+    - Ensure that the specified patrol area is well-defined and large enough for the chosen pattern.
+    - If no `drone_list` is provided, all drones in the swarm will participate in the patrol.
+---
+
+15. **`intercept_pattern`**
+
+  - **Purpose**: Commands a drone or a swarm to intercept a detected target using a precise movement pattern.
+
+  - **Parameters**:
+    - `target_name` (str): The identifier of the target to be intercepted.
+    - `drone_list` (list[str], optional): A list of drones to carry out the interception. If not provided, all available drones will be used.
+
+  - **Example Usage**:
+
+    ```python
+    # Command specific drones to intercept a target named "intruder"
+    drones_controller = Drones()
+    drones_controller.intercept_pattern(target_name="intruder", drone_list=['drone3', 'drone4'])
+
+    # Use all drones to intercept a target
+    drones_controller.intercept_pattern(target_name="intruder")
+    ```
+
+  - **Notes**:
+    - Ensure the target's location is updated in real-time to improve interception accuracy.
+    - If no `drone_list` is provided, all drones will be engaged in the interception.
+
+---
+
+16. **`track_pattern`**
+
+  - **Purpose**: Commands drones to track a moving target while maintaining a specified distance from the target.
+
+  - **Parameters**:
+    - `target_name` (str): The identifier of the target to be tracked.
+    - `distance` (float): The distance to maintain between the drone and the target.
+    - `drone_list` (list[str], optional): A list of drones to be used for tracking. Defaults to all available drones.
+
+  - **Example Usage**:
+
+    ```python
+    # Using specific drones to track a target "vehicle" while keeping 5.0 units distance
+    drones_controller = Drones()
+    drones_controller.track_pattern(target_name="vehicle", distance=5.0, drone_list=['drone1', 'drone5'])
+
+    # Using all drones to track a target at a specific distance
+    drones_controller.track_pattern(target_name="vehicle", distance=5.0)
+    ```
+
+  - **Notes**:
+    - Tracking is continuous, and drones should receive regular updates on the target's position.
+    - If no `drone_list` is provided, all drones in the swarm will engage in tracking.
+
+---
+
 ## Appendix B: Prompts
 ### user input
 Role：{[Initial system](#Initial-system)}
