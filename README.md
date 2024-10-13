@@ -649,14 +649,14 @@ drones.GoToTarget("drone_a", "target_1")
   - **Example Usage**:
 
     
-python
-    # Define home point for recall
-    home_point = (0, 0)
-    
-    # Create a Drones object and initiate emergency recall
-    drones_controller = Drones()
-    drones_controller.emergency_recall(home_point=home_point, drone_count=12)
-
+    ```python
+        # Define home point for recall
+        home_point = (0, 0)
+        
+        # Create a Drones object and initiate emergency recall
+        drones_controller = Drones()
+        drones_controller.emergency_recall(home_point=home_point, drone_count=12)
+    ```
 
   - **Notes**:
     - The method triggers a swift return to the home point for all specified drones, ensuring safety during emergencies.
