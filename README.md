@@ -465,13 +465,13 @@ drones.GoToTarget("drone_a", "target_1")
 
   - **Example Usage**:
 
-    ```python
-    # Creating a Drones object and executing the patrol and intercept procedure
-    drones_controller = Drones()
-    drones_controller.patrol_and_intercept(drone_list=['drone1', 'drone2'])
-    # Executing the patrol and intercept procedure with all available drones
-    drones_controller.patrol_and_intercept()
-    ```
+        ```python
+        # Creating a Drones object and executing the patrol and intercept procedure
+        drones_controller = Drones()
+        drones_controller.patrol_and_intercept(drone_list=['drone1', 'drone2'])
+        # Executing the patrol and intercept procedure with all available drones
+        drones_controller.patrol_and_intercept()
+        ```
 
  - **Notes**:
     - All drones in the swarm are used for patrolling and detection if no specific drone_list is provided.
