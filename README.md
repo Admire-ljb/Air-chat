@@ -491,7 +491,7 @@ Task Breakdown: Break down the task into key components or steps, including spec
 Task Difficulties: Highlight potential challenges or difficulties in completing the task, explaining why these might arise and what factors contribute to them.
 
 ### Output Segmentation
-
+Separate the output into two parts: one part is the code, and the other part is a description of the functionality of this code.
 
 ### KE requests
 
@@ -609,6 +609,18 @@ get_target_pose(target_name): Retrieves the position information of the specifie
    ```
    
 5. Notes: List any important notes, such as parameter requirements, expected behavior, or error conditions.
+
+
+### Human feedback reflection
+Please carefully analyze the user feedback and provide a new, improved code implementation that can better solve the task.
+Here is the user feedback：{usr comments}
+Here is the system feedback：{system comments}
+Some helpful tips for analyzing the feedback:
+    Prioritize user feedback, and then refer to system feedback.
+    for system feedback：
+       If the logical success rates are always low, then you must reinterpret the task and use a structured approach to rephrase the prompt.
+       If the logical success rates are high with low execution success rates, then you might consider recommending users to encapsulate some high-level primitives.
+
 
 ## Appendix C: Task Set
 ### AT1: Simple Tasks (1-5 steps per task)
