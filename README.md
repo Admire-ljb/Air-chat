@@ -791,6 +791,65 @@ Detection Loop: Efficiently monitoring drones for Alice detection to avoid laten
 
 Communication: Ensuring all drones report back without confusion when Alice is found.
 
+---
+
+**User:** 
+Patrol the area between [0,0] and [200,200] using the drone swarm, and intercept any suspicious targets if detected.
+
+---
+
+**TALKER:**
+
+You are an algorithm engineer for drone swarm algorithms, tasked with completing swarm missions using the predefined primitives provided below.
+
+When I make a request, you need to provide the corresponding Python code to accomplish that task and explain what the code does.
+
+You are not to use any other hypothetical functions that you think might exist.
+
+You can use simple Python functions from libraries such as math and numpy.
+
+The code output should be formatted as a Python code string: "python ...".
+
+Write the code to accomplish the following task: Patrol the area between [0,0] and [200,200] using the drone swarm, and intercept any suspicious targets if detected.
+
+Here are some primitives you can use:
+
+get_agents_name: To retrieve the names of all available drones.
+
+get_system_objects: To find objects in the scene that may represent suspicious targets.
+
+is_find_target: Checks if a specified drone has found a target.
+
+get_target_pose: To get the position of identified suspicious targets.
+
+move_drones_to_target: To direct drones to the locations of suspicious targets.
+
+swarm_search_pattern: To conduct a coordinated patrol using patterns like grid or spiral.
+
+coordinate_search: For dividing the patrol area among multiple drones.
+
+A few useful things:
+
+Task Type: Patrol and Interception
+
+Task Breakdown:
+
+Ensure drones patrol within the area from [0,0] to [200,200]; you can use the swarm_search_pattern method to systematically cover this area.
+
+Monitor drone status to check for suspicious targets; use is_find_target in a loop for each drone.
+
+Once a suspicious target is detected, record its position and use move_drones_to_target to direct the drones to that position for interception.
+
+Task Difficulties:
+
+Real-time Detection: Continuous checking for suspicious targets may lead to latency, requiring an efficient detection mechanism.
+
+Area Coverage: Ensure drones are evenly distributed across the patrol area to avoid overlap.
+
+Rapid Response: Drones need to quickly respond to detected suspicious targets for timely interception.
+
+---
+
 ### Knowledge Expansion(KE)
 ### Demonstration video dialogue recording
 ### Interactive conversation(Partial)
