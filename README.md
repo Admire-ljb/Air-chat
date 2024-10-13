@@ -1025,8 +1025,12 @@ class Drones:
     - All drones in the swarm are used for patrolling and detection if no specific drone_list is provided.
     - Ensure that the drone names are correctly retrieved before initiating the patrol.
 
+---
 
 ### Demonstration video dialogue recording
+
+
+---
 ### Interactive conversation(Partial)
 #### Simple Tasks
 You are an assistant helping me with the AirSim simulator for multi drones.
