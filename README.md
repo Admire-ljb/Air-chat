@@ -943,23 +943,24 @@ Please encapsulate it using the format
 
 and provide relevant documentation, as shown in the example.
 
-primitive Name: primitiveName
+- primitive Name: primitiveName
 
-Purpose: A brief description of the primitive's main task and purpose.
+- Purpose: A brief description of the primitive's main task and purpose.
 
-Parameters:
+- Parameters:
 
-ParameterName (DataType): Description of the parameter and its role.
+  - ParameterName (DataType): Description of the parameter and its role.
 
-ParameterName (DataType): Description of the parameter and its role. (List all parameters as needed)
+  - ParameterName (DataType): Description of the parameter and its role. (List all parameters as needed)
 
-Example Usage:
+- Example Usage:
 
-# A brief comment explaining the example
-FunctionCallExample
+  ```python
+  # A brief comment explaining the example
+  FunctionCallExample
+  ``` 
 
-
-Notes: List any important notes, such as parameter requirements, expected behavior, or error conditions.
+ - Notes: List any important notes, such as parameter requirements, expected behavior, or error conditions.
 
 
 
