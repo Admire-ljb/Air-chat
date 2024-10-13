@@ -869,7 +869,9 @@ Here are the primitives in the library: {primitives documents)}
 Analyze the given task and provide the following:
 
 Task Type: Identify the overall category of the task.
+
 Task Breakdown: Break down the task into key components or steps, including specific action primitives recommended for each part, you can shoose frome {TA1 output}.
+
 Task Difficulties: Highlight potential challenges or difficulties in completing the task, explaining why these might arise and what factors contribute to them.
 
 ---
