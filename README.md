@@ -634,13 +634,13 @@ Here is the system feedback：{system comments}
 
 Some helpful tips for analyzing the feedback:
 
-    Prioritize user feedback, and then refer to system feedback.
+  - Prioritize user feedback, and then refer to system feedback.
     
-    for system feedback：
+  - for system feedback：
     
-       If the logical success rates are always low, then you must reinterpret the task and use a structured approach to rephrase the prompt.
+     - If the logical success rates are always low, then you must reinterpret the task and use a structured approach to rephrase the prompt.
        
-       If the logical success rates are high with low execution success rates, then you might consider recommending users to encapsulate some high-level primitives.
+     - If the logical success rates are high with low execution success rates, then you might consider recommending users to encapsulate some high-level primitives.
 
 ---
 
