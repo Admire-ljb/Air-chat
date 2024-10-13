@@ -769,7 +769,7 @@ python
 
 ---
 
-### 25. **`assemble_group`**
+25. **`assemble_group`**
 
 - **Purpose**: Directs all members of a group to converge at a specific target location, ensuring they arrive as a coordinated unit.
 
@@ -797,7 +797,7 @@ python
 
 ---
 
-### 26. **`circular_escort`**
+26. **`circular_escort`**
 
 - **Purpose**: Commands all members of a group to surround and escort a moving target in a circular formation, maintaining a protective distance while orbiting the target.
 
