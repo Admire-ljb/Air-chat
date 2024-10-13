@@ -13,7 +13,7 @@
   ```python
   # Make drone_a hover at a height of 10.0 units
   drones.hover_at_height("drone_a", 10.0)
-  ```![Uploading image.png…]()
+  ```![image](https://github.com/user-attachments/assets/1d77b528-fbff-46d4-91a5-0529e64d6e8b)
 
 - **Notes**:
   - The height must be a positive float value.
@@ -686,6 +686,60 @@ Some helpful tips for analyzing the feedback:
 
 ## Appendix D: Chat history Logs
 ### Task Activation(TA)
+User: Fly all drones to find the hostage, there are more than one hostage.
+
+
+
+TALKER: You are an algorithm engineer for drone swarm algorithms, tasked with completing swarm missions using the predefined primitives provided below. 
+
+When I make a request, you need to provide the corresponding Python code to accomplish that task and explain what the code does.
+
+You are not to use any other hypothetical functions that you think might exist.
+
+You can use simple Python functions from libraries such as math and numpy.
+
+The code output should be formatted as a python code string: "python ... ".
+
+Write the code to accomplish following task：Fly all drones to find the hostage, there are more than one hostage. 
+
+Here are some primitives you can use: 
+
+get_agents_name: To retrieve the names of all available drones.
+
+get_system_objects: To find objects in the scene that may represent hostages.
+
+is_find_target: Checks if a specified drone has found the target
+
+get_target_pose: To get the position of identified hostages.
+
+move_drones_to_target: To direct drones to the locations of hostages.
+
+swarm_search_pattern: To conduct a coordinated search using patterns like grid or spiral.
+
+coordinate_search: For dividing the search area among multiple drones.
+
+A few useful things：
+
+Task Type: Cooperative searching
+
+Task BreakDown:
+
+Ensure drones are dispersed to cover a larger area, you can use swarm_search_pattern to systematically cover large areas using grid or spiral patterns.
+
+Monitor drone status to check for target detection, use is_find_target in a loop for each drone to check for specific hostage images.
+
+Record and navigate to the positions of identified hostages. Employ move_drones_to_target to direct drones to each hostage's location once identified
+
+Task Difficulties:
+
+Detection Loop: Continuous checking may lead to increased latency in finding hostages, requiring effective timing strategies.
+
+Dispersion Strategy: Effectively determining initial positions and ensuring that drones maintain their spacing during the search.
+
+Communication Issues: Ensuring that all drones can share information about found hostages without overlap or confusion.
+
+---
+
 ### Knowledge Expansion(KE)
 ### Demonstration video dialogue recording
 ### Interactive conversation(Partial)
