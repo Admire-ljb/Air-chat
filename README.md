@@ -686,11 +686,11 @@ Some helpful tips for analyzing the feedback:
 
 ## Appendix D: Chat history Logs
 ### Task Activation(TA)
-User: Fly all drones to find the hostage, there are more than one hostage.
+**User:**: Fly all drones to find the hostage, there are more than one hostage.
 
+---
 
-
-TALKER: You are an algorithm engineer for drone swarm algorithms, tasked with completing swarm missions using the predefined primitives provided below. 
+**TALKER:**: You are an algorithm engineer for drone swarm algorithms, tasked with completing swarm missions using the predefined primitives provided below. 
 
 When I make a request, you need to provide the corresponding Python code to accomplish that task and explain what the code does.
 
@@ -718,6 +718,7 @@ swarm_search_pattern: To conduct a coordinated search using patterns like grid o
 
 coordinate_search: For dividing the search area among multiple drones.
 
+---
 A few useful things：
 
 Task Type: Cooperative searching
