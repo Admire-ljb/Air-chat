@@ -13,7 +13,7 @@
   ```python
   # Make drone_a hover at a height of 10.0 units
   drones.hover_at_height("drone_a", 10.0)
-  ```![image](https://github.com/user-attachments/assets/1d77b528-fbff-46d4-91a5-0529e64d6e8b)
+  ```
 
 - **Notes**:
   - The height must be a positive float value.
