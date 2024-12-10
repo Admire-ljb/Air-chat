@@ -1,5 +1,5 @@
-# Appendix
-## Appendix A: Action primitives
+# TALKER settings and logs
+## A: Action primitives
 ### Basic action primitives
 ---
 
@@ -834,7 +834,7 @@ drones.GoToTarget("drone_a", "target_1")
      
 ---
 
-## Appendix B: Prompts
+## B: Prompts
 ### user input
 Role：{[Initial system](#Initial-system)}
 
@@ -1025,7 +1025,7 @@ Some helpful tips for analyzing the feedback:
 
 ---
 
-## Appendix C: Task Set
+## C: Task Set
 ### AT1: Simple Tasks (1-5 steps per task)
 1. A drone swarm completes a single-target search task.
 2. A drone swarm completes a single-target tracking task.
@@ -1065,7 +1065,7 @@ Some helpful tips for analyzing the feedback:
 4. A drone swarm continuously executes a multi-target search, patrol, tracking and interception task.
 
 
-## Appendix D: Chat history Logs
+## D: Chat history Logs
 ### Task Activation(TA)
 **User:** Fly all drones to find the hostage, there are more than one hostage.
 
